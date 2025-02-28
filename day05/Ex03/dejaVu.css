@@ -1,0 +1,58 @@
+body{
+  background-color: #D3D3D3;
+}
+
+.hd{
+  padding-top: 15px;
+  padding-bottom: 7px;
+  margin-top: 0%;
+  text-align: right;
+  color: white;
+  background-color: black;
+}
+
+.h020{
+
+  padding-top: 20px;
+  text-align: center;
+  border-bottom: 2px solid white;
+}
+
+/*.h021{
+  color: white;
+  display: table;
+  margin: auto;
+  background-color:#808080 ;
+
+} Primera forma*/
+
+.h021 {
+  text-align: center;
+  color: white;
+  background-color: #808080;
+
+}
+.div1{
+  width: 700px;
+  height: 290px;
+  padding-top: 20px ;
+  margin: auto;
+  border-bottom: 2px solid black;
+}
+.highlight{
+
+  color: red;
+  background-color: white;
+}
+
+.span1{
+  text-decoration: underline dashed red; 
+  font-size: 1.2rem; 
+  font-style: italic;
+}
+
+.span2{
+  text-decoration: underline dashed red;
+   font-size: 1.25rem; 
+  font-style: italic;
+}

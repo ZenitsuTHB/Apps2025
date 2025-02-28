@@ -1,0 +1,49 @@
+ body {
+   background-color: #fbc79f;
+ }
+
+ .container {
+   margin: auto;
+   height: 900px;
+   width: 900px;
+ }
+
+ .prim {
+   padding: 6px;
+   color: white;
+   text-align: center;
+ }
+
+ .azul {
+   padding: 6px;
+   border: 3px solid #65988c;
+   background-color: #8ad0c0;
+ }
+
+ .maron {
+   padding: 6px;
+
+   border-color: darkgrey;
+   border-style: dotted;
+   background-color: #e0e0e0;
+ }
+
+ .maron0 {
+   padding: 6px;
+   border-style: double;
+   border-color: #848484;
+   background-color: #e0e0e0;
+ }
+
+ .yellow {
+   padding: 6px;
+   border: 5px solid yellow;
+   background-color: #ffffb5;
+ }
+
+ .lila {
+   padding: 6px;
+   border-color: #a89bdb;
+   border-style: dashed;
+   background-color: #dfdaf2;
+ }
