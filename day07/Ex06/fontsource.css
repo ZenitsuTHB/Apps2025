@@ -1,0 +1,11 @@
+
+@font-face {
+
+  font-family: custom ;
+  src: url(ressources/fuente.ttf);
+}
+
+h1{
+
+  font-family: custom;
+}

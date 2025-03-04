@@ -1,0 +1,10 @@
+
+.container{
+
+  margin: auto;
+  height: 500px;
+  width: 500px;
+  border: 1px solid black;
+  background: url(ressources/html-left.png) no-repeat, url(ressources/html-right.png) no-repeat; 
+  background-position: center left, center right;
+}

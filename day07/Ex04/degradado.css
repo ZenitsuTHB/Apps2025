@@ -1,0 +1,11 @@
+
+.gradient{
+
+  height: 400px;
+  width: 400px;
+  margin: auto;
+  border: 1px solid black;
+  background: url(ressources/tijeras.svg) no-repeat, url(ressources/mundo.svg) no-repeat,radial-gradient(ellipse at center, #cedbe9 15%, #aac5de 17%, #6199c7 50%, #3a84c3  51%, #419ad6 61%, #4bb8f0 71%, #3a8bc2 84%, #26558b 100%);
+  background-position: bottom right, center;
+  background-size: auto auto, 23% 23%, auto auto;
+}
