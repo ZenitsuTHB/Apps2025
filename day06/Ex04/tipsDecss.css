@@ -1,0 +1,53 @@
+
+body{
+  background-color: #BFC1B0;
+}
+
+.main{
+  margin: auto;
+  background-color: transparent;
+  max-width: 650px;
+}
+
+.title{
+
+  color: #191970;
+  text-align: right;
+  letter-spacing: 20px;
+}
+
+.smtitle{
+  color: white;
+  background-color: #5b6135;
+}
+
+.fiore{
+  display: flex;
+}
+
+.novellaimg{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.txtfiore{
+  margin-top: 0px;
+}
+
+.fioreimg{
+  display: flex;
+}
+
+.croce{
+  margin-top: 20px;
+}
+.croceimg{
+
+  margin-left: 54%;
+}
+
+mt-0{
+  margin-top: 0px;
+}

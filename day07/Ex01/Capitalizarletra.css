@@ -1,0 +1,31 @@
+body{
+  background-color:#FDDBBD ;
+}
+
+h2{
+  color: #beb8b2;
+  text-align: center
+}
+
+.main{
+  display: flex; 
+  padding: 2px;
+  width: 900px;
+  margin: auto;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.box {
+    
+  border: 2px dashed #d2af77;
+  width: 200px;
+  height: 200px;
+  box-sizing:border-box;
+    padding: 10px;
+}
+
+p::first-letter{
+    font-size: 3em;
+    color: #C9A568;
+}
