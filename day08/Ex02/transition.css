@@ -1,0 +1,12 @@
+div {
+  margin: auto;
+  background-color: pink;
+  width: 400px;
+  height: 400px;
+  transition: 1s;/* next exo is just progresive using transition*/
+}
+
+div:hover {
+  background-color: black;
+  transition: 0.4s; /*adding this makes it stay a little bit when we hover it*/
+}

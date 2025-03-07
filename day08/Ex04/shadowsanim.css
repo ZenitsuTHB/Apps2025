@@ -1,0 +1,33 @@
+
+
+
+.div1 {
+  text-align: center;
+  height: 220px;
+  width: 300px;
+  margin: auto;
+  margin-top: 10%;
+  background-color: bisque;
+}
+
+p{
+  font-size: xx-large;
+  padding-top: 20%;
+  text-shadow: 
+  -50px -50px 3px #ff0000, 
+  50px 50px 3px green, 
+  50px -50px 1.7px yellow,
+  -50px 50px 2px blue ;
+  transition: 3s;
+}
+
+p:hover {
+  padding-top: 40%;
+  padding-bottom: 0%;
+  text-shadow:
+    50px 50px 3px #ff0000,
+    -50px -50px 3px green,
+    -50px 50px 1.7px yellow,
+    50px -50px 2px blue;
+    transition: 3s;
+}
