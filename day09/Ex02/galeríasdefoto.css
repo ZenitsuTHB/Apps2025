@@ -1,0 +1,33 @@
+
+
+
+.st {
+  width: 200px;
+  background-color: black;
+  position: relative;
+}
+
+.im1{
+  transition: 1.5s;
+  max-width: 100%;
+}
+
+.im1:hover {
+  opacity: 0.3;
+  transform: scale(2);
+}
+
+.st p{
+  color: white;
+  opacity: 0;
+  top:30px;
+  position:absolute;
+  width: 100%;
+  text-align: center;
+  text-shadow: 3px 3px 3px black;
+}
+
+.st:hover p
+{
+  opacity: 3;
+}

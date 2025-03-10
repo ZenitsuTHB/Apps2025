@@ -1,0 +1,15 @@
+
+.popup{
+  height: 200px;
+  width: 200px;
+  margin: auto;
+}
+
+a .tt{
+  position: absolute;
+  display: none;
+}
+
+a:hover .tt{
+  display: block;
+}

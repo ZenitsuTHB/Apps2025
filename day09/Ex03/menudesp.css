@@ -1,0 +1,64 @@
+
+@font-face {
+  font-family: flechita;
+  src: url(Arrows_tfb.ttf);
+}
+.container{
+
+  margin: auto;
+  height: 700px;
+  width: 700px;
+  padding: 5px;
+  border: 1px solid turquoise;
+}
+
+.menu {
+  width: 400px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: black;
+  background: pink;
+  border: solid black 2px;
+  border-radius: 10px;
+  padding: 15px;
+  display: block;
+  transition: 1s;
+}
+
+.menu li{
+  display: inline-block;
+}
+
+.menu li.hasChildren > a::after {
+  
+  color: skyblue;
+  font-family: flechita;
+  content: " o";
+}
+
+.menu .hasChildren ul {
+  overflow: hidden;
+  padding-left: 0px;
+  position: absolute;
+  opacity: 0;
+  transition: 1.5s;
+  max-height: 0;
+}
+
+.menu .hasChildren li {
+  display: block;
+}
+
+.menu li:hover > a {
+  background-color: salmon;
+}
+
+.menu .hasChildren:hover ul {
+  opacity: 1;
+  transition: 1.5s;
+  max-height: 800px;
+}
