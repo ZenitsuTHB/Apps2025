@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+  input:valid{
+		background:rgb(93, 201, 93);
+	}
+	input:invalid{
+		background:rgb(218, 63, 63);
+	}
+    label {
+      display: inline-block;
+      width: 120px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>Validación de un formulario con HTML</h1>
+      <form action="">
+        <label for="name">Name</label>
+        <input type="text" id="name" required="required"/><br/><br/>
+        <label for="age">Age</label>
+        <input type="number" placeholder="0" id="age"><br/><br/>
+        <label for="postalcode">Postal code</label>
+        <input type="number" placeholder="00000" id="postalcode" required="required" ><br/><br/>
+        <label for="email">Email</label>
+        <input type="email" id="email"><br/><br/>
+        <label for="bookingdate">Booking date</label>
+        <input type="date" placeholder="00/ 00/ 2000 " id="bookingdate" required="required"><br/><br/>
+        <label for="nota">Nota</label>
+        <input type="range" id="nota">
+    </div>
+  </body>
+</html>
