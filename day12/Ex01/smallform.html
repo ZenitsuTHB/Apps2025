@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      label {
+        display: inline-block;
+        width: 300px;
+      }
+      .container {
+        display: block;
+        margin: auto;
+        width: 180px;
+        padding: 25px;
+        border-radius: 20px;
+        border: 1.6px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3>Form</h3>
+      <form action=" https://dummyjson.com/auth/login" method="post">
+        <label for="username"> User</label>
+        <input
+          type="text"
+          id="user"
+          placeholder="user"
+          required
+          minlength="5"
+        />
+        <br />
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="password" />
+        <br />
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="email@tld.com" pattern="" />
+        <br />
+        <label for="comment">Leave your comment here</label>
+        <textarea name="comment" id="comment" placeholder="comments"></textarea>
+        <br />
+        <p>Select a number</p>
+        <input type="radio" id="age1" name="age" value="30" />
+        <label for="age1">0 - 30</label><br />
+        <input type="radio" id="age2" name="age" value="60" />
+        <label for="age2">31 - 60</label><br />
+        <input type="radio" id="age3" name="age" value="100" />
+        <label for="box">Agree with the conditions</label>
+        <input type="checkbox" />
+        <br />
+
+        <input type="submit" />
+      </form>
+    </div>
+  </body>
+</html>
