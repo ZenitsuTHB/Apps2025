@@ -1,0 +1,29 @@
+table {
+  margin: 20px auto;
+  padding: 30px;
+  border-collapse:collapse;
+  width: 400px;
+}
+
+thead{
+  background-color: aqua;
+  
+}
+
+tbody tr:nth-child(even) {
+  background-color: aquamarine;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: lightgreen;
+}
+
+th, td {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid darkcyan;
+}
+
+tfoot {
+  background-color: rebeccapurple;
+}

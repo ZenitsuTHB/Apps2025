@@ -1,0 +1,23 @@
+
+.container {
+  margin: auto;
+  height: 100pc;
+  width: 480px;
+  background-color: blue;
+}
+
+@media (min-width:480px){
+
+  .container {
+    background-color: green;
+  }
+    
+}
+
+@media (min-width:1024px) {
+
+  .container {
+
+    background-color: red;
+  }
+}
