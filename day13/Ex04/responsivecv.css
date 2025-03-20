@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  margin: 20px auto;
+  width: 100%;
+  max-width: 612px;
+  height: auto;
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.leftcol {
+  width: 100%;
+  background-color: #1c97b6;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.imgperfil {
+  display: block;
+  border-radius: 50%;
+  padding: 5px;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+.infos {
+  padding: 10px;
+  color: #fff;
+}
+
+hr {
+  width: 85%;
+  height: 1px;
+  border: none;
+  background-color: black;
+}
+
+.infos p {
+  margin: 0px;
+  padding: 0px 0px 0px 2px;
+  text-align: center;
+}
+
+.contact,
+.softskill,
+.languages {
+  padding: 0;
+  margin: 0;
+}
+
+.contact li,
+.softskill li {
+  margin-top: 0px;
+}
+
+.contact li a,
+.softskill li a {
+  padding: 2px;
+  text-align: center;
+  color: aliceblue;
+  text-decoration: none;
+}
+
+.rightcol {
+  display: block;
+  padding: 15px;
+  width: 100%;
+  background-color: aquamarine;
+  box-sizing: border-box;
+}
+
+fieldset {
+  margin-bottom: 20px;
+}
+
+/* Responsivité */
+@media (min-width: 768px) {
+  .leftcol {
+    width: 35%;
+    background-color: #1c97b6;
+  }
+
+  .rightcol {
+    width: 65%;
+    background-color: aquamarine;
+  }
+}
+
+/* Media query pour très petits écrans (comme les téléphones) */
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    margin: 10px;
+  }
+
+  .leftcol,
+  .rightcol {
+    width: 100%;
+  }
+
+  .imgperfil {
+    max-width: 80%;
+  }
+
+  fieldset legend {
+    font-size: 1rem;
+  }
+}
