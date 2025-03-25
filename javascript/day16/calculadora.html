@@ -1,0 +1,110 @@
+<!-- 
+ <script>
+  let rand = Math.floor(Math.random() * (7 - 1 + 1)) + 1;
+  console.log(rand);
+</script> 
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="calculadora.css" />
+    <script src="./calcluladora.js"></script>
+  </head>
+  <body>
+    <h1>Calculadora</h1>
+    <div class="container">
+      <h2>Arch_kulator</h2>
+      <form name="calculator">
+        <input type="textfield" id="input" placeholder="0" name="ans" value="" readonly autocomplete="off" />
+        <div class="buttons">
+          <input type="reset" value="AC" class="gray" />
+          <input type="button"  value="+/-" onclick="toggleSign()"  class="gray" />
+          <input type="button" value="%" onclick="document.calculator.ans.value+='%'" class="gray" />
+          <input type="button" value="÷" onclick="document.calculator.ans.value+='/'" class="orange" />
+          <br>
+          <input type="button" value="7" onclick="document.calculator.ans.value+='7'" class="darkgray" />
+          <input type="button" value="8" onclick="document.calculator.ans.value+='8'" class="darkgray"/>
+          <input type="button" value="9" onclick="document.calculator.ans.value+='9'" class="darkgray" />
+          <input type="button" value="*" onclick="document.calculator.ans.value+='*'" class="orange"/>
+          <br>
+          <input type="button" value="4" onclick="document.calculator.ans.value+='4'" class="darkgray"/>
+          <input type="button" value="5" onclick="document.calculator.ans.value+='5'" class="darkgray"/>
+          <input type="button" value="6" onclick="document.calculator.ans.value+='6'" class="darkgray"/>
+          <input type="button" value="-" onclick="document.calculator.ans.value+='-'" class="orange" />
+          <br>
+          <input type="button" value="1" onclick="document.calculator.ans.value+='1'" class="darkgray"/>
+          <input type="button" value="2" onclick="document.calculator.ans.value+='2'" class="darkgray"/>
+          <input type="button" value="3" onclick="document.calculator.ans.value+='3'" class="darkgray" />
+          <input type="button" value="+" onclick="document.calculator.ans.value+='+'" class="orange" />
+          
+          <br>
+          <input type="button" value="more" onclick="moreOption()" class="darkgray" />
+          <input type="button" value="0" onclick="document.calculator.ans.value+='0'" class="darkgray"/>
+          <input type="button" value="," onclick="document.calculator.ans.value+='.'" class="darkgray"/>
+          <input type="button" value="=" onclick="document.calculator.ans.value=eval(document.calculator.ans.value)" class="orange" />
+        
+        
+        
+        
+          <!-- 
+        
+          <div class="buttons">
+          <button onclick="clearDisplay()">C</button>
+          <button onclick="append('+')">+</button>
+          <button onclick="append('-')">-</button>
+          <button onclick="append('*')">*</button>
+          <button onclick="append('/')">/</button>
+          <button onclick="append('7')">7</button>
+          <button onclick="append('8')">8</button>
+          <button onclick="append('9')">9</button>
+          <button onclick="append('4')">4</button>
+          <button onclick="append('5')">5</button>
+          <button onclick="append('6')">6</button>
+          <button onclick="append('1')">1</button>
+          <button onclick="append('2')">2</button>
+          <button onclick="append('3')">3</button>
+          <button onclick="append('0')">0</button>
+          <button onclick="calculate()">=</button>
+          -->
+        </div>
+
+      </form>
+     
+    </div>
+    
+  </body>
+</html>
+
+<!--
+          input type="button" value="C" onclick="document.calculator.ans.value=''" /
+          -->
+<!--<script>
+      const n1 = Number(prompt("Ingrese el primer numero"));
+      const n2 = Number(prompt("Ingrese el primer numero"));
+      const op = prompt("Ingrese el operador(+, -, *, /)");
+
+      let res;
+
+      switch (op) {
+        case "+":
+          res = n1 + n2;
+          break;
+        case "+":
+          res = n1 - n2;
+          break;
+        case "+":
+          res = n1 * n2;
+          break;
+        case "+":
+          res = n1 / n2;
+          break;
+        default:
+          alert("Operador Invalido");
+          break;
+      }
+      alert(`El resultado de ${n1} ${op} ${n2} es ${res}`);
+</script>-->
