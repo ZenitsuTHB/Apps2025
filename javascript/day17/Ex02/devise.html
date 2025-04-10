@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    /*document.querySelector('button').onclick = changeDevise
+    document.querySelector('button').onclick = function() {
+      changeDevise('test')
+    }*/
+
+    document.querySelector('button').addEventListener('contexmenu', function() {changeDevise()}) = changeDevise
+
+    function changeDevise() {
+      
+        let euros = document.querySelector('#euros').value 
+        
+        
+      //if sum parse before operation
+      //let euros = Parse(document.querySelector('#euros').value) or 
+      //let euros = Number(document.querySelector('#euros').value)  
+      
+      let dollars = euros + 10
+
+        document.querySelector('#dollars').value = dollars
+    }
+
+  </script>
+  
+</body>
+</html>

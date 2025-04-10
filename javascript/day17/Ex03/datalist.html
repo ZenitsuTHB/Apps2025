@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    form div {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <form action="">
+    <div>
+      <label for="name">Name of the client</label>
+      <input type="text">
+    </div>
+      <label for="material">Mat</label>
+      <select name="" id="material">
+        <option value="dm">Madera</option>
+        <option value="pt">Plastico</option>
+        <option value="mt">Metal</option>
+      </select>
+    </div>
+      <div>
+        <label for="dimension">Dimension box</label>
+        <input type="radio" name="dimension" value="diminuta">Diminuta<br>
+        <label for="dimension">Dimension box</label>
+        <input type="radio" name="dimension" value="diminuta" checked>Pequeña<br>
+        <label for="dimension">Dimension box</label>
+        <input type="radio" name="dimension" value="diminuta">Grande<br>
+      </div>
+      <div>
+        <label for="comments">Comments</label>
+        <textarea name="" id="comments"></textarea>
+      </div>
+      <div>
+        <button type="button">Send</button>
+      </div>
+      <div>
+        <input type="text" name="" id="">
+      </div>
+  </form>
+  <script>
+    //get name
+    //get material type
+    //get maerial dimension
+    //get comments
+    //send the name + defaulttext1 + materialt type + dftex2 + material dimension + comments
+    document.querySelector('button').onclick = sendRequest
+
+    function sendRequest () {
+      let name = document.querySelector("#name").value.trim()
+      console.log(name)
+    }
+    
+  </script>
+  
+</body>
+</html>

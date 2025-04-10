@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form div {
+        margin-bottom: 10px;
+      }
+
+      label {
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" onsubmit="validateForm()">
+      <div>
+        <label for="firstname">Firstname</label>
+        <input type="text" id="firstname" required />
+      </div>
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" required />
+      </div>
+      <div>
+        <label for="age">Age</label>
+        <input type="number" id="name" min="0" max="120" />
+      </div>
+      <div>
+        <label for="address">Address</label>
+        <input type="text" id="address" />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" required />
+      </div>
+      <div>
+        <label for="comments">Comments</label>
+        <textarea name="" id="comments"></textarea>
+      </div>
+      <!--<div>
+        <button type="button" onclick="validateForm()">click me</button>
+      </div>-->
+      <div>
+        <button>submit</button>
+      </div>
+
+    </form>
+    <script>
+      function validateForm(event) {
+
+        event.preventDefault()
+        let firstname = document.getElementById("name").value.trim()
+        let name = document.querySelector("#name").value.trim()
+        console.log(firstname)
+
+        try {
+
+          if (!firstname)
+            throw('firstname is mandatory')
+          if (!name)
+            throw ('Name is mandatory');
+          window.alert('There were no mistakes')
+        } catch (error) {
+
+          window.alert(error)
+          
+        }
+      }
+    </script>
+  </body>
+</html>
