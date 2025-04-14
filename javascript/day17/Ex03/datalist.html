@@ -5,16 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    form div {
-      margin-bottom: 10px;
-    }
+    form div {margin-bottom: 10px;}
+      input#message {
+        width: 400px;
+      }
+
   </style>
 </head>
 <body>
   <form action="">
     <div>
       <label for="name">Name of the client</label>
-      <input type="text">
+      <input type="text" id="name">
     </div>
       <label for="material">Mat</label>
       <select name="" id="material">
@@ -33,26 +35,70 @@
       </div>
       <div>
         <label for="comments">Comments</label>
-        <textarea name="" id="comments"></textarea>
+        <textarea id="comments"></textarea>
       </div>
       <div>
         <button type="button">Send</button>
       </div>
       <div>
-        <input type="text" name="" id="">
+        <input type="text" id="message" disabled>
       </div>
   </form>
   <script>
-    //get name
-    //get material type
-    //get maerial dimension
-    //get comments
-    //send the name + defaulttext1 + materialt type + dftex2 + material dimension + comments
+  
     document.querySelector('button').onclick = sendRequest
 
+    function trimmer(text) {
+ 
+      console.log('hola esta es trimmer')
+      let trimmed = text.trim()
+      let res
+      let flag = false
+
+      for(let i = 0; i < trimmed.length; i++)
+      {
+        if (trimmed[i] == ' ')
+            flag = true
+        if (flag == true)
+        {
+          while (trimmed[i] == ' ')
+          i++
+          flag = false
+        }
+        res += trimmed[i]
+      }
+
+      console.log(res)
+
+      return(trimmed) 
+    }
+    
     function sendRequest () {
-      let name = document.querySelector("#name").value.trim()
-      console.log(name)
+      document.querySelector('#message').value = ''
+      let name = document.querySelector("#name").value
+      let material = document.querySelector('#material').value.
+      0
+      let dimension = document.querySelector('[name=dimension]:checked').value
+      if (!dimension){
+        window.alert('Dimension is null or undefined')
+        return
+      }
+      console.log('entrada: \n', name)
+      name = trimmer(name)
+      console.log('salida: \n', name)
+
+      let comments = document.querySelector('#comments').value.trim()
+
+      if(name === '')
+      {
+        window.alert('Name is mandatory !')
+        return        
+      }
+
+      
+      let msg = name + ' ha pedido una caja de ' + material + ' con unas dimensiones ' + dimension + '. ' + comments
+
+      document.querySelector('#message').value = msg
     }
     
   </script>
