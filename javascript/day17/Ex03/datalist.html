@@ -48,35 +48,56 @@
   
     document.querySelector('button').onclick = sendRequest
 
+    /*function eliminarEspacios(texto) {
+    
+    while (texto.indexOf('  ') >=0) {
+    texto = texto.replace('  ', ' ')
+    }
+    return texto
+    }
+      function eliminarEspaciosConsecutivos(texto) {
+      while (texto.includes("  ")) {
+        texto = texto.split("  ").join(" ");
+      }
+      return texto.trim();
+    }
+
+      function eliminarEspaciosConsecutivos(texto) {
+    return texto.split(/\s+/).join(' ').trim();
+      }
+    }
+    */
     function trimmer(text) {
  
       console.log('hola esta es trimmer')
       let trimmed = text.trim()
-      let res
+      let res = '';
       let flag = false
-
-      for(let i = 0; i < trimmed.length; i++)
+      
+     for(let i = 0; i < trimmed.length; i++)
       {
         if (trimmed[i] == ' ')
             flag = true
-        if (flag == true)
+        if (flag === true)
         {
+          res += ' ';
           while (trimmed[i] == ' ')
-          i++
+            i++
           flag = false
         }
-        res += trimmed[i]
+        if (i < trimmed.length)
+          res += trimmed[i]
       }
-
-      console.log(res)
-
-      return(trimmed) 
+      console.log('this is the res \n',res)
+      return(res) 
     }
     
     function sendRequest () {
+
+  
       document.querySelector('#message').value = ''
       let name = document.querySelector("#name").value
-      let material = document.querySelector('#material').value.
+      let material = document.querySelector('#material').value
     
       let dimension = document.querySelector('[name=dimension]:checked').value
       if (!dimension){

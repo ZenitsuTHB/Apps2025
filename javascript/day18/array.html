@@ -1,10 +1,63 @@
 <script>
-  let numeros = ['Roma', 'Londres', 'Berlin'] // escalar
-  let precio = [300, 350, 400]
+
+  //arrays escalares
+
+  let capitales = ['Roma', 'Londres', 'Berlin']
+  let prices = [300, 350, 400]
+
+  // longitud de un array
+  document.write('Longitud array', capitales.length, '<br>')
+
+  // buscar elementos en un array 
+  let index = capitales.indexOf('Berlin')
+  document.write('index : ', index, '<br>')
+  document.write('this is the element : ', capitales[index], '<br>')
+
+  // look for an element to check if it exist or not 
+  let exist = capitales.includes('roma')
+  document.write('existe true or false ? : ', exist, '<br>')
+
+  // add a new capital to the array
+  capitales.push('Kyoto')
+  prices.push(150)
+
+  //modify price 
+  prices[0] = 230
+  document.write('Price changed : ', prices, '<br>')
+
+  //erase an element from the array no matter where it is 
+  /*index = indexOf('Berlin')
+  if ( index >= 0 )
+  {
+    capitales.splice(index, 1)
+    prices.splice(index, 1)
+  }
+  document.write('New capitales : ', capitales, '<br>')
+  document.write('New prices : ', prices, '<br>')
+*/
+  //order an array
+      //capitales.sort()
+      let matrix = []
+      for (let i = 0; i < capitales.length; i++) {
+
+        matrix.push([capitales[i], prices[i]])
+      }
+      document.write('this is the matriiix : ', matrix, '<br>')
+      matrix.sort()
+      document.write('this is the sorted matriiix : ', matrix, '<hr>')
+
+      //document.write('New capitales sorted : ', capitales, '<br>')
+      //document.write('')
+
+  //recorrer con el iterador
+  capitales.map(capital => document.write(capital, '<br>'))
+  document.write('<hr>')
+  //CALLBACK function
+  //capitales.map(function(capital) {document.write(capital, '<br>')})
 
 
   //iteradores de arrays : map, filter, find, every, findIdex, ...
-  let personas = [ 
+  let ciudades = [ 
     {
       nombre: 'Roma',
       precio: '300'
@@ -18,4 +71,12 @@
       precio: 400
     }
     ]
+
+    for(let i = 0; i < ciudades.length; i++)
+    {
+      document.write('Ciudad : ', ciudades[i].nombre , ' Precio : ', ciudades[i].precio,'<br>')
+    }
+
+    ciudades.map(city => document.write('City name : ', city.nombre, ' Precio : ' ,city.precio,'<br>'))
+
 </script>
