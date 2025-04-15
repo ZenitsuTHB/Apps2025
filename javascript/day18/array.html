@@ -79,4 +79,16 @@
 
     ciudades.map(city => document.write('City name : ', city.nombre, ' Precio : ' ,city.precio,'<br>'))
 
+    //obtener todas las ciudades cuyo precio sea superior a 300
+    ciudades.filter(city => city.precio > 300).map(city => document.write('city : ', city.nombre, ' Precio : ', city.precio, '<br>'))
+    //OR
+    ciudades.filter(city => {
+
+      if (city.precio > 300 )
+        return city
+    }) 
+
+    // Look for a specific city (ROMA)
+    let lookingCity = ciudades.find(city => city.nombre == 'Roma')
+    document.write('ciudad : ', lookingCity.nombre, ' Precio : ', lookingCity.precio, '<br>')
 </script>
