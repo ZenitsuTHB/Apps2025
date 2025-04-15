@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <button type="button">Añadir Párrafo</button>
+    <h3>New Paragraph</h3>
+  </div>
+  <script>
+   // document.querySelector('button').addEventListener('click', addParagraph)
+    document.querySelector('button').onclick = insertAdjacent
+    function addParagraph(){
+
+      //add a new paragraph after the button
+      document.querySelector('div').innerHTML += '<p>new Paragraph</p>'
+    }
+
+    //INSERT ADJACENT
+    function insertAdjacent() {
+
+      document.querySelector('div').insertAdjacentHTML('beforeend', '<p> NEW ONE </p>')      
+      //document.querySelector('div').insertAdjacentHTML('afterbegin', '<p> NEW ONE </p>')      
+    }
+  </script>
+  
+</body>
+</html>

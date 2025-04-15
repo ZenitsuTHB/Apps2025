@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div { padding: 50px; background-color: lightblue;}
+    .red{ background-color: red;}
+  </style>
+</head>
+<body>
+  <div>
+    <button type="button" id="change">Change Color</button>
+    <button type="button" id="restore">Restore Color</button>
+    <button type="button" id="alternate">Alternate Color</button>
+  </div>
+  
+</body>
+<script>
+  document.querySelector('#change').onclick =  changeStyleClass
+  document.querySelector('#restore').onclick = restoreStyle
+  document.querySelector('#alternate').onclick = alternateStyle
+
+  function alternateStyle(){
+
+    document.querySelector('div').classList.toggle('red')
+  }
+  function restoreStyle(){
+
+    //if style where used
+    document.querySelector('div').style.backgroundColor = 'lightblue'
+    //if classlist where used
+    document.querySelector('div').classList.remove('red')
+  }
+
+  //change div style directly, NOT recomandable
+  function changeStyle() {
+
+    document.querySelector('div').style.backgroundColor = 'red'
+    document.querySelector('div').style.padding = '20px'
+  }
+  //this is the same as before but correctly Done
+  function changeStyleClass(){
+
+    document.querySelector('div').classList.add('red')
+  }
+</script>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+     .container {
+      flex-direction: column;
+      border-radius: 10%;
+    margin: auto;
+    width: 400px;
+    height: 700px;
+    background-color: lightblue;
+    display: flex; /* Usamos Flexbox para centrar el contenido horizontalmente */
+    justify-content: center; /* Centrado horizontal */
+    align-items: flex-start; /* Alineamos el título en la parte superior */
+  }
+    .title{
+      margin-top: 7px;
+      width: 180px;
+      background-color: black;
+      color: brown;
+      padding: 7px;
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 1.5rem;
+      font-weight: 100;
+      border-radius: 20px ;
+    }
+    .keys{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">Arch_Kulator</div>
+    <div class="keys"></div>
+    <form action="">
+        <input type="textfield" id="input" placeholder="0" name="ans" value="" readonly autocomplete="off" />
+        <div class="keys">
+          <input type="button" value="0">
+          <input type="button" value="1">
+          <input type="button" value="2">
+          <input type="button" value="3">
+          <input type="button" value="4">
+          <input type="button" value="5">
+          <input type="button" value="6">
+          <input type="button" value="7">
+          <input type="button" value="8">
+          <input type="button" value="9">
+          <input type="button" value="c">
+        </div>
+
+    </form>
+  </div> 
+</body>
+
+</html>

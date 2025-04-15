@@ -90,5 +90,11 @@
 
     // Look for a specific city (ROMA)
     let lookingCity = ciudades.find(city => city.nombre == 'Roma')
-    document.write('ciudad : ', lookingCity.nombre, ' Precio : ', lookingCity.precio, '<br>')
+    if (lookingCity){
+      document.write('ciudad : ', lookingCity.nombre, ' Precio : ', lookingCity.precio, '<br>')
+    }
+
+    //get the index of a specific city
+    let idx = ciudades.findIndex(city => city.nombre == 'Londres')
+    document.write('Index : ', idx)
 </script>
