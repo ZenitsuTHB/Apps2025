@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <form action="">
+    <input type="text" placeholder="DNI sin letra">
+    <input type="text" disabled="DNI sin letra">
+    <button type="button" id="calcular">Calcular letra</button>
+  </form>
+</body>
+<script>
+  document.querySelector('#calcular').onclick = calculate
+  const LETRAS = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E']
+
+  function calculate(){
+    
+    let num = Number(document.querySelector('#numerodni').value)
+    if(isNaN(num)){
+      window.alert('DNI debe de ser número')
+      return
+    }
+    let remain = num % 23
+
+
+
+
+    document.querySelector('#letra').value = LETRAS[remain]
+
+  }
+
+  //IBAN ES99 9999 9999 CC99
+
+</script>
+</html>

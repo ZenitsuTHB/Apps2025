@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {text-align: center;}
+        img {width: 400px; height: 300px;display: block;margin: 20px auto;}
+    </style>
+</head>
+<body>
+    <div>
+        <img src="img/punta_cana_1.jpg" alt="">
+        <button type="button" id="previous"><<</button>
+        <button type="button" id="next">>></button>
+    </div>
+    <script>
+        const IMAGES =
+         [
+          'ressources/punta_cana_1.jpg',
+          'ressources/punta_cana_2.jpg',
+          'ressources/punta_cana_3.jpg',
+          'ressources/punta_cana_4.jpg',
+          'ressources/punta_cana_5.jpg',
+          'ressources/punta_cana_6.jpg'
+        ];
+        //crear un array con el nombre de 6 imagenes de forma que, al pulsar sobre los botones << o >> se muestre en pantalla la imagen anterior o siguiente del array. Inicialmente la imagen a mostrar será la que ocupe el índice 0
+        let image = document.querySelector('img')
+
+        let viewedImage = 0
+        document.querySelector('#next').onclick = nextImage
+        document.querySelector('#previous').onclick = previousImage
+
+        
+        //si ya estamos en la primera y pulsamos << se mostrará la última
+        //si estamos en la última y pulsamos >> se mostrará la primera
+         function previousImage()
+        { 
+          if (viewedImage == 0)
+            viewedImage =  IMAGES.length - 1
+          else
+            viewedImage--
+
+          image++
+          image.setAttribute('src', `img/${IMAGES[viewedImage]}`)          
+        }
+
+        function nextImage()
+        { 
+          if (viewedImage == IMAGES.length - 1)
+            viewedImage = 0
+          else
+            viewedImage++
+
+          image++
+          image.setAttribute('src', `img/${IMAGES[viewedImage]}`)          
+        }
+    </script>
+</body>
+</html>

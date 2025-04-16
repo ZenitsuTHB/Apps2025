@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {text-align: center;}
+        img {width: 400px; height: 300px;display: block;margin: 20px auto;}
+    </style>
+</head>
+<body>
+    <div>
+        <img src="ressources/punta_cana_1.jpg" alt="">
+    </div>
+</body>
+<script>
+  document.querySelector('img').onclick = switchImage
+
+  function switchImage()
+  {
+    document.querySelector('img').setAttribute('src', 'ressources/punta_cana_3.jpg')
+  }
+</script>
+
+</html >
+
+<!--DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {text-align: center;}
+        img {width: 400px; height: 300px;display: block;margin: 20px auto;}
+    </style>
+</head>
+<body>
+    <div>
+        <img src="ressources/punta_cana_1.jpg" alt="Imagen de la playa de punta cana">
+    </div>
+</body>
+<!--script>
+ let image = document.querySelector('img')
+ //activar el evento onclick sobre la imagen 
+ image.onclick = switchImage
+  function switchImage()
+  {
+    //cambiar el atributo de la imagen 
+    //image.src = 'ressorces/punta_cana_3.jgp'
+    document.querySelector('img').setAttribute('src', 'ressources/punta_cana_3.jpg')
+    let attributeValue = image.getAttribute('alt')
+    window.alert(attributeValue)
+    //delete an attribute of a node
+    image.removeAttribute('alt')
+}
+</script>
+
+<script>
+  const image = document.querySelector('img')
+
+  //lista de imagenes
+  const images = 
+  [
+          'ressources/punta_cana_1.jpg',
+          'ressources/punta_cana_2.jpg',
+          'ressources/punta_cana_3.jpg',
+          'ressources/punta_cana_4.jpg',
+          'ressources/punta_cana_5.jpg',
+          'ressources/punta_cana_6.jpg'
+        ];
+
+    let index = 0;
+    image.onclick = switchImage
+
+    function switchImage(){
+      index = (index + 1 ) % images.length;//turn to 0 when reach the end
+      image.src = images[index]
+    }
+</script>
+
+</html-->

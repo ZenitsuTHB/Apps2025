@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {width:300px;height: 300px;border:1px solid black; margin:50px auto;display: flex;justify-content: center;align-items: center;}
+        div {width: 100px; height: 100px;background-color: brown;}
+    </style>
+</head>
+<body>
+    <section>
+        <div></div>
+    </section>
+    <script>
+        document.querySelector('section').onclick = alert1
+        document.querySelector('div').onclick = alert2
+
+        function alert1 (){
+          window.alert('section')
+        }
+
+        function alert2 (ev){
+          ev.stopPropagation()
+          //detener la propagacion del evento para evitar que se ejecute la funcion asociacion la funcion asociada a la caja section
+          window.alert('div')
+        }
+    </script>
+</body>
+</html>

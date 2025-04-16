@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav {text-align: center; margin:50px}
+        a {border:1px solid grey; padding: 10px;text-decoration: none;color:black}
+        .resaltar {background-color: yellowgreen;}
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">Enlace 1</a>
+        <a href="#">Enlace 2</a>
+        <a href="#">Enlace 3</a>
+        <a href="#">Enlace 4</a>
+    </nav>
+    <script>
+       /* ejercicio 1: 
+        Al pasar el ratón por encima de cada enlace cambiará el color del fondo utilizando la clase resaltar
+
+        Cuando el ratón sale del enlace se restablece el color de fondo original
+       */
+      //obtener todos los enlaces (etiquetas <a>)
+        let links = document.querySelectorAll('a')
+      //ejercicio 2:
+      let activeLinks = null
+
+     //activar los dos eventos para cada enlace
+        links.forEach(links => {
+          //ejercicio 1: 
+          //links.onmouseover = toggleChannelCol
+          //links.onmouseout = toggleChannelCol
+          //ejercicio 2: 
+          links.onclick = changeChannelCol
+
+        })
+      //funcion para añadir o eliminar la clase resaltar
+      function changeChannelCol(ev)
+      {
+        ev.target.classList.add('resaltar')
+        if (activeLinks)
+          activeLinks.classList.remove('resaltar')
+        activeLinks = ev.target
+      }
+      
+      function toggleChannelCol(ev){
+        
+        ev.target.classList.toggle('resaltar')
+      }
+
+       /* ejercicio 2: 
+        Al pulsar sobre cada enlace cambiará el color del fondo utilizando la clase resaltar
+
+        Si hubiera otro botón, distinto del pulsado, con la clase resaltar activa se eliminará ésta
+       */
+      /*
+      // Obtener todos los enlaces (etiquetas <a>)
+        let links = document.querySelectorAll('a')
+        // Activar los dos eventos para cada enlace 
+        links.forEach(link => {
+        link.onmouseover = () => link.classList.add('resaltar')
+        link.onmouseout = () => link.classList.remove('resaltar')
+        })
+        */
+    </script>
+</body>
+</html>
