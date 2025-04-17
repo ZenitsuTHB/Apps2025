@@ -52,24 +52,27 @@
         <label for="comments">Comments</label>
         <textarea name="" id="comments"></textarea>
       </div>
-      <!--<div>
-        <button type="button" onclick="validateForm()">click me</button>
-      </div>-->
+      <!--div>
+        <button type="button" onclick="validateForm(event)">click me</button>
+        <button type="button" onsubmit="validateForm(event)">click me</button>
+      </div-->
       <div>
-        <button>submit</button>
+        <button type="submit">Submit</button>
       </div>
 
     </form>
     <script>
+      document.querySelector('form').addEventListener('submit', validateForm)
       function validateForm(event) {
 
         event.preventDefault()
-        let firstname = document.getElementById("name").value.trim()
+        let firstname = document.getElementById("firstname").value.trim()
         let name = document.querySelector("#name").value.trim()
+        console.log(name)
         console.log(firstname)
 
-        try {
-
+        try 
+        {
           if (!firstname)
             throw('firstname is mandatory')
           if (!name)

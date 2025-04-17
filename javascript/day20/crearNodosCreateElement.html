@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {width: 300px; height: 200px; display: inline-block;padding:5px;border:1px solid grey; vertical-align: top;}
+        img {width: 100%;}
+        .galery {
+  width: 300px;
+  height: 200px;
+  display: inline-block;
+  padding: 5px;
+  border: 1px solid grey;
+}
+
+    </style>
+</head>
+<body>
+  <section>
+    <div>
+        <img src="../day19/ressources/punta_cana_1.jpg" alt="PLayas de punta cana">
+    </div>
+    </section>
+    <script>
+      const IMAGES = ['../day19/ressources/punta_cana_2.jpg', '../day19/ressources/punta_cana_3.jpg']
+      const SECTION = document.querySelector('section')
+      //crear una estructura <div> <img src alt> </div>
+      IMAGES.map(image => createNode(image))
+
+      function createNode(image) {
+        /*
+        //create node with innerHTML o insertAdjacentHTML
+        let node = `<div><img src='../day19/ressources/${image}' alt='playas de punta cana'></div>`
+        //with inner or adjacent to get the name via event we do 
+        let node = `<div class='galery'><img src='../day19/ressources/${image}' alt='playas de punta cana' onclick='nameOfImage()'></div>`
+        SECTION.innerHTML += node
+        //document.querySelector('section').insertAdjacentHTML('beforeend', node)
+      */
+
+      //SECOND WAY
+      //create a node 
+      let div = document.createElement('div')//create a node 
+      div.classList.add('galery')// to add a class
+      let img = document.createElement('img')
+
+      img.setAttribute('src', image) 
+      img.setAttribute('alt', 'playas de punta cana')
+
+      //when user click on an image an alert with the name of the image will be showed
+      img.onclick = nameOfImage
+      
+      div.appendChild(img)//place the image inside of the box (div)
+      console.log(div)
+      SECTION.appendChild(div)//place the box inside of the section 
+    }
+
+      function nameOfImage(ev) {
+        window.alert(ev.target.getAttribute('src'))
+      }
+
+    </script>
+</body>
+</html>

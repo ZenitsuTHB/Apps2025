@@ -1,6 +1,6 @@
 ### PRL
 
-prevenció de riscos laborals
+prevenció de riscos laboral
 
 Existen 3 specialitats en prl
 
