@@ -4,27 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      form{
-        
-        margin: auto;
-        width: 300px;
-        border: 1px solid black;
-      }
-      form div {
-        margin-bottom: 10px;
-      }
-
-      label {
-        width: 100px;
-        display: inline-block;
-      }
-      label#age{
-        
-      }
-      button{
-      }
-    </style>
+    <link rel="stylesheet" href="form.css">
   </head>
   <body>
     <form action="" onsubmit="validateForm()">
@@ -61,29 +41,6 @@
       </div>
 
     </form>
-    <script>
-      document.querySelector('form').addEventListener('submit', validateForm)
-      function validateForm(event) {
-
-        event.preventDefault()
-        let firstname = document.getElementById("firstname").value.trim()
-        let name = document.querySelector("#name").value.trim()
-        console.log(name)
-        console.log(firstname)
-
-        try 
-        {
-          if (!firstname)
-            throw('firstname is mandatory')
-          if (!name)
-            throw ('Name is mandatory');
-          window.alert('There were no mistakes')
-        } catch (error) {
-
-          window.alert(error)
-          
-        }
-      }
-    </script>
+    <script src="form.js"></script>
   </body>
 </html>

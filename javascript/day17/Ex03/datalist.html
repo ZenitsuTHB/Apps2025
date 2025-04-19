@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Sending the box</title>
   <style>
     form div {margin-bottom: 10px;}
       input#message {
-        width: 400px;
+        width: 90%;
       }
 
   </style>
@@ -16,9 +16,9 @@
   <form action="">
     <div>
       <label for="name">Name of the client</label>
-      <input type="text" id="name">
+      <input type="text" id="name" required>
     </div>
-      <label for="material">Mat</label>
+      <label for="material">Material box &nbsp &nbsp&nbsp</label>
       <select name="" id="material">
         <option value="dm">Madera</option>
         <option value="pt">Plastico</option>
@@ -44,9 +44,10 @@
         <input type="text" id="message" disabled>
       </div>
   </form>
-  <script>
-  
-    document.querySelector('button').onclick = sendRequest
+  <script src="datalist.js">
+
+  //document.querySelector('button').addEventListener('click', sendRequest)
+  //document.querySelector('button').onclick = sendRequest
 
     /*function eliminarEspacios(texto) {
     
@@ -66,7 +67,7 @@
     return texto.split(/\s+/).join(' ').trim();
       }
     }
-    */
+    
     function trimmer(text) {
  
       console.log('hola esta es trimmer')
@@ -119,7 +120,7 @@
 
       document.querySelector('#message').value = msg
     }
-    
+    */
   </script>
   
 </body>

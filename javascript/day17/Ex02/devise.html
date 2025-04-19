@@ -3,33 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Currency Input</title>
 </head>
 <body>
-
-  <script>
-    /*document.querySelector('button').onclick = changeDevise
-    document.querySelector('button').onclick = function() {
-      changeDevise('test')
-    }*/
-
-    document.querySelector('button').addEventListener('contexmenu', function() {changeDevise()}) = changeDevise
-
-    function changeDevise() {
-      
-        let euros = document.querySelector('#euros').value 
-        
-        
-      //if sum parse before operation
-      //let euros = Parse(document.querySelector('#euros').value) or 
-      //let euros = Number(document.querySelector('#euros').value)  
-      
-      let dollars = euros + 10
-
-        document.querySelector('#dollars').value = dollars
-    }
-
-  </script>
-  
+  <h3>Euros to  dollars</h3>
+  <h6>Rate : 1€ = 2$</h6>
+  <form action="">
+    <label for="euros">Euros : </label>
+    <input type="text" id="euros" placeholder="€" required>
+    <br />
+    <label for="">Dollars : </label>
+    <output></output>
+    <br />
+    <button type="button">Calculate</button>
+  </form>
+  <script src="devise.js"></script>
 </body>
 </html>

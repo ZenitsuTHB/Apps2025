@@ -1,0 +1,19 @@
+form{
+        
+  margin: auto;
+  width: 300px;
+  border: 1px solid black;
+}
+form div {
+  margin-bottom: 10px;
+}
+
+label {
+  width: 100px;
+  display: inline-block;
+}
+label#age{
+  
+}
+button{
+}
