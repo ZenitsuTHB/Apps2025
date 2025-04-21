@@ -15,8 +15,8 @@
 <body>
     <section>
         <form>
-            <input type="text" placeholder="Nombre" id="nombre">
-            <input type="text" placeholder="Apellidos" id="apellidos">
+            <input type="text" placeholder="Nombre" id="nombre" required>
+            <input type="text" placeholder="Apellidos" id="apellidos" required>
             <button type="button" id="alta">Alta</button>
             <button type="button" id="modi" disabled>Modificar</button>
             <button type="button" id="baja" disabled>Baja</button>
@@ -39,12 +39,43 @@
         Al pulsar el botón de alta se trasladará el nombre y apellidos de la persona que hemos informado en el formulario a la tabla situada debajo previa validación de los datos (nombre y apellidos son obligatorios).
         Una vez se hayan trasladado se limpiará el formulario
         */
-        document.querySelector('#alta').onclick = 
-        let name = document.querySelector('#nombre').value
-        let firstName = document.querySelector('#apellidos').value
-
-        window.alert(name)
-        window.alert( firstName)
+        document.querySelector('#alta').onclick = addToList
+      
+        function addToList()
+        {
+            let name = document.querySelector('#nombre').value
+            let firstName = document.querySelector('#apellidos').value
+            
+            if(!name || !firstName)
+            {
+                alert("Name and firstname is mandatory !\n")
+                return ;
+            }
+        
+            // Crear nueva fila en la tabla
+            const tbody = document.querySelector('table tbody');
+            const newRow = document.createElement('tr');
+    
+            // Celda para el nombre
+            const nameCell = document.createElement('td');
+            nameCell.className = 'nombre';
+            nameCell.textContent = name;
+    
+            // Celda para el apellido
+            const lastNameCell = document.createElement('td');
+            lastNameCell.className = 'apellidos';
+            lastNameCell.textContent = firstName;
+    
+            // Añadir celdas a la fila
+            newRow.appendChild(nameCell);
+            newRow.appendChild(lastNameCell);
+    
+            // Añadir fila al tbody
+            tbody.appendChild(newRow);
+            
+            document.querySelector('#nombre').value = ''
+            document.querySelector('#apellidos').value = ''
+        }
 
         //PARTE 2: Tabla consulta
         /*

@@ -11,7 +11,7 @@
 document.querySelector('button').addEventListener('click', sendBox)
 
 function parserName(oldName) {
-  oldName = oldName.trim()
+ // oldName = oldName.trim()
   let newName = ''
 
   for( let i = 0; i < oldName.length; i++)
