@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main {width: 60%; margin:auto; border:1px solid blue; padding:20px}
+        table,td {border:1px solid grey;padding:5px}
+    </style>
+</head>
+<body>
+    <main>
+        <table>
+            <thead><td>Vino</td><td>Bodega</td><td>Denominación</td><td>Foto botella</td></thead>
+            <tbody id="vinos-tbody"></tbody>
+        </table>
+    </main>
+    <script>
+
+      const API = 'https://api.sampleapis.com/wines/reds/';
+
+      fetch(API)
+      .then(response => response.json())
+      .then(data => mostrarVinos(data))
+      .catch(error => console.error('Error al cargar los datos :', error));
+
+      //function that shows the data in the table
+      function mostrarVinos(vinos)
+      {
+        // get the <tbody> where we'll insert the rows
+        const tbody = document.querySelector('#vinos-tbody');
+
+        vinos.forEach(vino => {
+
+          //create a row <tr>
+          const tr = document.createElement('tr');
+
+          //create the cells for the wine
+          const tdWine = document.createElement('td')
+          tdWine.textContent = vino.wine; // name of the wine
+          const tdWinery = document.createElement('td');
+          tdWinery.textContent = vino.winery; //bodega
+          const tdLocation = document.createElement('td');
+          tdLocation.textContent = vino.location; //origin
+
+          //cells for the wine image 
+
+          const  tdImg = document.createElement('td');
+          const img = document.createElement('img')
+
+          img.src = vino.image;
+          img.alt = vino.wine;
+          img.style.width = '100px';
+
+          tdImg.appendChild(img);
+          tr.appendChild(tdWine);
+          tr.appendChild(tdWinery);
+          tr.appendChild(tdLocation);
+          tr.appendChild(tdImg)
+
+          tbody.appendChild(tr);          
+        });
+      }
+        /*
+        FORMATO RESPUESTA API https://api.sampleapis.com/wines/reds/
+        [
+            {
+                "winery": "Maselva",
+                "wine": "Emporda 2012",
+                "rating": {
+                    "average": "4.9",
+                    "reviews": "88 ratings"
+                },
+                "location": "Spain\n·\nEmpordà",
+                "image": "https://images.vivino.com/thumbs/ApnIiXjcT5Kc33OHgNb9dA_375x500.jpg",
+                "id": 1
+            },
+            {
+                "winery": "Ernesto Ruffo",
+                "wine": "Amarone della Valpolicella Riserva N.V.",
+                "rating": {
+                    "average": "4.9",
+                    "reviews": "75 ratings"
+                },
+                "location": "Italy\n·\nAmarone della Valpolicella",
+                "image": "https://images.vivino.com/thumbs/nC9V6L2mQQSq0s-wZLcaxw_pb_x300.png",
+                "id": 2
+            },
+        ]   
+        */
+    </script>  
+</body>
+</html>

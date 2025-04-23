@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //API FETCH
+
+    // terms to know 
+    // asynchrone
+
+    //realizar un a peticion a una API externa para consultar(una peticion GET) la lista de todas las particulas subtatómicas que se han descubierto 
+
+    const API = 'https://alcyon-it.com/WEBSERVICES/quantum/consulta.php'
+    
+    
+    fetch(API)//petición
+    .then(respuesta => {
+
+      if(respuesta.ok) {
+        return respuesta.json()// .text() o .blob(+)
+      }
+      else{
+        throw (`La petición no ha ido bien. Status: ${respuesta.status}`)
+      }
+    })//respuesta del servidor 
+    .then(particulas => { 
+      console.log(particulas) 
+    }
+    )//operativa a realizar con la respuesta
+    .catch(mensaje => {
+      window.alert(mensaje)
+      let codigo = mensaje[0]
+      let particulas = mensaje[1]
+
+      particulas.map(particula => {
+        document.write(particula.nombre, ' ', particula.tipo), '<br>'
+      })
+    })//operativa a realizar en caso de error 
+
+    console.log('me ejecuto antes que nadie')
+  </script>
+  
+</body>
+</html>
