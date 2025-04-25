@@ -23,7 +23,7 @@
       fetch(API)
       .then(response => response.json())
       .then(data => mostrarVinos(data))
-      .catch(error => console.error('Error al cargar los datos :', error));
+      .catch(error => alert('Error al cargar los datos :', error));
 
       //function that shows the data in the table
       function mostrarVinos(vinos)
