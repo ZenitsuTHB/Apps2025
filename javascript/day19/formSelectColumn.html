@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {width: 60%;margin:auto;padding:20px;border: 1px solid grey;}
+        table, td {border:1px solid grey; margin: auto;}
+        tbody tr {cursor: pointer;}
+        tbody tr:hover {background-color: lightblue;}
+        td {padding: 5px}
+    </style>
+</head>
+<body>
+    <section>
+        <form>
+            <input type="text" placeholder="Nombre" id="nombre" required>
+            <input type="text" placeholder="Apellidos" id="apellidos" required>
+            <button type="button" id="alta">Alta</button>
+            <button type="button" id="modi" disabled>Modificar</button>
+            <button type="button" id="baja" disabled>Baja</button>
+            <button type="button" id="clean" disabled>Empty Storage</button>
+        </form>
+        <hr>
+        <table>
+            <thead>
+                <tr><th>Nombre</th><th>Apellidos</th></tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+    <script src="formSelectColumn.js">      
+    </script>
+</body>
+</html>
