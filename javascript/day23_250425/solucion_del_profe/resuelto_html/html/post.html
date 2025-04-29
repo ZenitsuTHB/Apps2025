@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Película</title>
+</head>
+<body>
+    <h1>Formulario para Agregar Película</h1>
+    <script>
+        const API = "https://movies.alcyon-it.com/api/peliculas"
+
+        let titulo = 'How to talk to anyone'
+        let direccion = 'Dale Carnegie'
+        let anio = 1985
+        let idcategoria = 1
+        let sinopsis = 'Sin sinopsis'
+
+        // Función para hacer el POST a la API
+        function postMovie() {
+            const movieData = {
+                titulo: titulo,
+                direccion: direccion,
+                anio: anio,
+                idcategoria: idcategoria,
+                sinopsis: sinopsis
+            }
+
+            fetch(API, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(movieData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Éxito:', data);
+                alert('Película agregada correctamente!');
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('Hubo un error al agregar la película.');
+            });
+        }
+
+        // Llamar a la función para agregar la película cuando cargue la página
+        postMovie();
+    </script>
+</body>
+</html>
