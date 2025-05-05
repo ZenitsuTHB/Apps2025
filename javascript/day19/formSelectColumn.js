@@ -8,6 +8,7 @@ document.querySelector('#alta').onclick = addUser
 //SAVE DATAS AND MODIFY THEM IN LOCAL STORAGE
 //Rebuild the table when page loaded
 document.addEventListener('DOMContentLoaded', loadTableFromStorage);
+
 function loadTableFromStorage() {
     //clean the table before loading it
     const tbody = document.querySelector('table tbody');
@@ -70,8 +71,10 @@ function addRows(name, firstName) {
 
     const tbody = document.querySelector('table tbody');
     const newRow = document.createElement('tr');
+
     const nameCell = document.createElement('td');
     const firstnameCell = document.createElement('td');
+
     nameCell.className = 'nombre'
     firstnameCell.className = 'apellidos'
     nameCell.textContent = name;
@@ -116,11 +119,14 @@ document.querySelector('tbody').addEventListener('click', function (ev) {
 let lastTr = null;
 
 function modifyForm(ev) {
+
     const currentRow = ev.currentTarget;
-    const nombre = currentRow.querySelector('.nombre').innerText
-    const apellidos = currentRow.querySelector('.apellidos').innerText
+    const nombre = currentRow.querySelector('.nombre').innerText.trim()
+    const apellidos = currentRow.querySelector('.apellidos').innerText.trim()
+
     document.querySelector('#nombre').value = nombre
     document.querySelector('#apellidos').value = apellidos
+
     document.querySelector('#baja').removeAttribute('disabled')
     document.querySelector('#modi').removeAttribute('disabled')
     lastTr = currentRow;

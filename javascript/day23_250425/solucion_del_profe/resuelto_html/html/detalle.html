@@ -1,16 +1,17 @@
 <div class='row'>
+  <div class='column col-12 alert alert-warning avisos'>Película no existe</div>
   <div class='column col-8'>
     <div class="card m-auto">
       <div class="card-body">
-        <h2 class="card-title">título película</h2>
+        <h2 class="card-title" id="titulo">título película</h2>
         <hr>
-        <h5 class="card-subtitle mb-2 text-muted">Categoría:</h5>
-        <h5 class="card-subtitle mb-2 text-muted">Dirección:</h5>
-        <h5 class="card-subtitle mb-2 text-muted">Año:</h5>
+        <h5 class="card-subtitle mb-2 text-muted">Categoría: <span id="categoria"></span></h5>
+        <h5 class="card-subtitle mb-2 text-muted" id="direccion">Dirección:</h5>
+        <h5 class="card-subtitle mb-2 text-muted" id="anio">Año:</h5>
         <hr>
-        <p class="card-text">sinopsis</p>
+        <p class="card-text" id="sinopsis">sinopsis</p>
       </div>
-      <br>
+      <br><br><br>
       <span onclick="cargarSeccion('consulta')" class="btn btn-outline-primary btn-inline">Volver a listado</span>
     </div>
   </div>

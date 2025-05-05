@@ -1,0 +1,17 @@
+1.- modificar el fichero scripts.js para que, una vez cargado el componente de consulta de detalle de película, se ejecute la función que se encargue de realizar las acciones necesarias para iniciar el componente. En esta función necesitaremos el id de la película a consultar
+
+2.- Crear la funcion detalle(id) dentro del nuevo fichero detalle.js para realizar la consulta de la película con el id que recuperaremos del parámetro de entrada de la función. Para ello llamaremos a una función consultaDetalle(id) que crearemos en el fichero peliculas.js
+
+3.- Añadir el nuevo fichero detalle.js al fichero principal index.html
+
+4.- Crear la función consultaDetalle(id) dentro del fichero peliculas.js. Esta función realizará la siguiente operativa:
+
+    - Confeccionar el endpoint de la API teniendo en cuenta que hay que pasar como parámetro el id de la película a consultar
+
+    - Petición con la API Fetch al endpoint de consulta de una película 
+
+    - Si la petición es OK (segundo then) informar los datos de la película del documento detalle.html a partir de la respuesta recibida (será un array con un solo objeto)
+
+    - Si la consulta no devuelve ninguna película (array vacio) mostrar el mensaje 'Película no existe' en el área .alert-warning de detalle.html
+
+    - SI la petición no es OK (catch) mostrar el error en un alert
