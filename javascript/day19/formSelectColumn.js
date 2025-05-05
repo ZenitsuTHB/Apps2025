@@ -77,8 +77,10 @@ function addRows(name, firstName) {
 
     nameCell.className = 'nombre'
     firstnameCell.className = 'apellidos'
+
     nameCell.textContent = name;
     firstnameCell.textContent = firstName;
+
     newRow.appendChild(nameCell);
     newRow.appendChild(firstnameCell);
     tbody.appendChild(newRow);
@@ -127,8 +129,10 @@ function modifyForm(ev) {
     document.querySelector('#nombre').value = nombre
     document.querySelector('#apellidos').value = apellidos
 
-    document.querySelector('#baja').removeAttribute('disabled')
-    document.querySelector('#modi').removeAttribute('disabled')
+    //document.querySelector('#baja').removeAttribute('disabled')
+    //document.querySelector('#modi').removeAttribute('disabled')
+    //document.querySelector('#alta').setAttribute('disabled', true)
+
     lastTr = currentRow;
 }
 

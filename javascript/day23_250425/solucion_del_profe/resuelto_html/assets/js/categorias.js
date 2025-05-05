@@ -1,7 +1,7 @@
 const API_CATEGORIAS = "https://movies.alcyon-it.com/api/categorias"
 
-function consultaCategorias() {
-    fetch(API_CATEGORIAS)
+async function consultaCategorias() {
+    await fetch(API_CATEGORIAS)
     .then(respuesta => {
         if (respuesta.ok) {
             return respuesta.json()

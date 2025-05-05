@@ -18,7 +18,7 @@ function cargarSeccion(seccion, id=null) {
     .then(response => response.text())
     .then(seccionhtml => {
         document.querySelector('#contenido').innerHTML = seccionhtml
-        iniciarComponente(seccion)
+        iniciarComponente(seccion, id)
     })
 
 }
@@ -31,6 +31,12 @@ function iniciarComponente(seccion, id) {
             break;
         case 'alta':
             alta()
+            break;
+        case 'mantenimiento':
+            mantenimiento(id)
+            break;
+        case 'detalle':
+            detalle(id)
             break;
         default:
             break;

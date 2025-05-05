@@ -136,6 +136,193 @@ function altaPelicula() {
     
 }
 
+function modificarPelicula() {
+    //recuperar las cajas de avisos y errores
+    const avisosOK = document.querySelector('.alert-success')
+    const avisosNOK = document.querySelector('.alert-danger')
+
+    //ocultar las cajas de avisos y errores
+    avisosOK.classList.add('avisos')
+    avisosNOK.classList.add('avisos')
+           
+    //recuperar datos del formulario 
+    let imagen = document.querySelector('#portada').files[0]
+    let titulo = document.querySelector('#titulo').value.trim()
+    let direccion = document.querySelector('#direccion').value.trim()
+    let anio = document.querySelector('#anio').value
+    let idcategoria = document.querySelector('#idcategoria').value
+    let sinopsis = document.querySelector('#sinopsis').value.trim()
+    let id = document.querySelector('#idpelicula').value
+
+    //validar datos 
+
+    //confeccionar el objeto formData
+    const formdata = new FormData() 
+    formdata.append ('titulo', titulo)
+    formdata.append ('direccion', direccion)
+    formdata.append ('anio', anio)
+    formdata.append ('sinopsis', sinopsis)
+    formdata.append ('idcategoria', idcategoria)
+    formdata.append ('_method', 'PUT')
+    if (imagen) formdata.append ('img', imagen); //no podemos enviar a la api un atributo img sin informar (o lo enviamos informado con una imagen o NO lo enviamos)
+
+    //crear el objeto con los parámetros de la petición
+    const parametros = {
+        'method': 'POST', //alta de recurso (pelicula)
+        'body': formdata //datos a enviar al servidor
+    }
+
+    let api = `${API_PELICULAS}/${id}`
+
+    //realizar la petición con la API Fetch
+    fetch(api, parametros)
+    .then(respuesta => {
+        if (respuesta.ok) {
+            return respuesta.json()
+        } else {
+            //lanzamos una excepcion con la respuesta en formato json porque la API, en caso de error, nos va a enviar un json con el array de errores
+            throw (respuesta.json())
+        }
+    })
+    .then(mensaje => {console.log(mensaje)
+        //si la respuesta es correcta mostrar un mensaje de modificación efectuada
+        avisosOK.classList.remove('avisos')
+    })
+    .catch(error => error.then(er => {
+        //si la respuesta no es correcta mostrar los errores que vendrán en formato array
+        console.log(er)
+        let errores = ''
+
+        //recorrer el array de errores para confeccionar una caja para cada uno de ellos
+        er.forEach(e => {
+            errores += `<div>${e}</div>`
+        })
+
+        avisosNOK.innerHTML = errores //mostrar errores en la caja
+        avisosNOK.classList.remove('avisos') //visualizar la caja
+    }))
+    
+}
+
+function bajaPelicula() {
+    //recuperar las cajas de avisos y errores
+    const avisosOK = document.querySelector('.alert-success')
+    const avisosNOK = document.querySelector('.alert-danger')
+
+    //ocultar las cajas de avisos y errores
+    avisosOK.classList.add('avisos')
+    avisosNOK.classList.add('avisos')
+           
+    //recuperar datos del formulario 
+    let id = document.querySelector('#idpelicula').value
+
+    //crear el objeto con los parámetros de la petición
+    const parametros = {
+        'method': 'DELETE' //borrar un recurso (pelicula)
+    }
+
+    let api = `${API_PELICULAS}/${id}`
+
+    //realizar la petición con la API Fetch
+    fetch(api, parametros)
+    .then(respuesta => {
+        if (respuesta.ok) {
+            return respuesta.json()
+        } else {
+            //lanzamos una excepcion con la respuesta en formato json porque la API, en caso de error, nos va a enviar un json con el array de errores
+            throw (respuesta.json())
+        }
+    })
+    .then(mensaje => {console.log(mensaje)
+        //si la respuesta es correcta redirigir a consulta de peliculas
+        cargarSeccion('consulta')
+    })
+    .catch(error => error.then(er => {
+        //si la respuesta no es correcta mostrar los errores que vendrán en formato array
+        console.log(er)
+        let errores = ''
+
+        //recorrer el array de errores para confeccionar una caja para cada uno de ellos
+        er.forEach(e => {
+            errores += `<div>${e}</div>`
+        })
+
+        avisosNOK.innerHTML = errores //mostrar errores en la caja
+        avisosNOK.classList.remove('avisos') //visualizar la caja
+    }))
+    
+}
+
+function consultaPelicula(id) {
+    let api = `${API_PELICULAS}/${id}`
+
+    fetch(api)
+    .then(respuesta => {
+        if (respuesta.ok) {
+            return respuesta.json()
+        } else {
+            throw(`Petición incorrecta con status: ${respuesta.status}`)
+        }
+    })
+    .then(pelicula => {
+        console.log(pelicula)
+        //infomrar el error si la pelicula no existe
+        if (pelicula.length == 0) {
+            document.querySelector('.alert-warning').classList.remove('avisos')
+
+            //limpiar formulario de la consulta anterior
+            document.querySelector('#formulario').reset()
+            document.querySelector('#previsualizar').src = 'assets/img/sinportada.jpg'
+
+            return
+        }
+
+        //informar los datos de la pelicula en el formulario
+        document.querySelector('#idpelicula').value = id //necesitamos el id de la pelicula para la modificación y la baja
+        document.querySelector('#titulo').value = pelicula[0].titulo
+        document.querySelector('#idcategoria').value = pelicula[0].idcategoria
+        document.querySelector('#anio').value = pelicula[0].anio
+        document.querySelector('#direccion').value = pelicula[0].direccion
+        document.querySelector('#sinopsis').value = pelicula[0].sinopsis
+        //document.querySelector('#previsualizar').setAttribute('src', pelicula[0].img)
+        document.querySelector('#previsualizar').src = pelicula[0].img
+    })
+    .catch(error => window.alert(error))
+}
+
+function consultaDetalle(id) {
+    let api = `${API_PELICULAS}/${id}`
+
+    fetch(api)
+    .then(respuesta => {
+        if (respuesta.ok) {
+            return respuesta.json()
+        } else {
+            throw(`Petición incorrecta con status: ${respuesta.status}`)
+        }
+    })
+    .then(pelicula => {
+        console.log(pelicula)
+        //infomrar el error si la pelicula no existe
+        if (pelicula.length == 0) {
+            document.querySelector('.alert-warning').classList.remove('avisos')
+
+            return
+        }
+
+        //informar los datos de la pelicula en el formulario
+        
+        document.querySelector('#titulo').innerText = pelicula[0].titulo
+        document.querySelector('#categoria').innerText = pelicula[0].categoria.nombre
+        document.querySelector('#anio').innerText = pelicula[0].anio
+        document.querySelector('#direccion').innerText = pelicula[0].direccion
+        document.querySelector('#sinopsis').innerText = pelicula[0].sinopsis
+        //document.querySelector('#previsualizar').setAttribute('src', pelicula[0].img)
+        document.querySelector('#previsualizar').src = pelicula[0].img
+    })
+    .catch(error => window.alert(error))
+}
+
 function previsualizarImagen(ev) {
     //recuperar la imagen seleccionada
     let imagen = ev.target.files[0]
