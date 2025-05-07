@@ -1,7 +1,7 @@
 
 document.querySelector('#spin').addEventListener('click', shuffleGame)
 
-const BET = true
+let BET = true
 
 function checkData(amount, bet) {
 
@@ -43,7 +43,69 @@ function shuffleGame() {
   document.querySelector('#reel2').setAttribute('src', `img/${hasard[1]}.png`)
   document.querySelector('#reel3').setAttribute('src', `img/${hasard[2]}.png`)
 
-  let contador = {}
+  /*
+    PRIZE
+    conditions for prize
+    1) the three generated numbers are the same
+    2) 2 generated  numbers are same and the other is the joker which is the bar num = 9
+  
+    ACTIONS IN CASE OF PRIZE
+    1) The amount will increase, amount += prize factor * bet
+    2) The prize value will be printed in the win input field
+  
+    Each bet will decrease the amount the bet time, amount -= bet * time;
+  */
+
+  document.querySelector('#win').value = ''
+
+  let prizeFactor = [1, 2, 3, 5, 10, 20, 100, 300, 500, 1000]
+
+  if (hasard[0] === hasard[1] && hasard[1] === hasard[2]) {
+
+    document.querySelector('#amount').value += prizeFactor[hasard[0]] * bet
+    document.querySelector('#win').value = prizeFactor[hasard[0]] * bet
+  }
+  else if (hasard[0] === hasard[1] && hasard[2] === 9) {
+
+    document.querySelector('#amount').value += prizeFactor[hasard[0]] * bet
+    document.querySelector('#win').value = prizeFactor[hasard[0]] * bet
+
+  }
+  else if (hasard[0] === hasard[2] && hasard[1] === 9) {
+
+    document.querySelector('#amount').value += prizeFactor[hasard[0]] * bet
+    document.querySelector('#win').value = prizeFactor[hasard[0]] * bet
+
+  }
+  else if (hasard[0] === 9 && hasard[1] === hasard[2]) {
+
+    document.querySelector('#amount').value += prizeFactor[hasard[1]] * bet
+    document.querySelector('#win').value = prizeFactor[hasard[1]] * bet
+
+  }
+  else if (hasard[0] === 9 && hasard[1] === 9) {
+
+    document.querySelector('#amount').value += prizeFactor[hasard[2]] * bet
+    document.querySelector('#win').value = prizeFactor[hasard[2]] * bet
+
+  }
+  else if (hasard[0] === 9 && hasard[2] === 9) {
+
+    document.querySelector('#amount').value += prizeFactor[hasard[1]] * bet
+    document.querySelector('#win').value = prizeFactor[hasard[1]] * bet
+
+  }
+  else if (hasard[1] === 9 && hasard[2] === 9) {
+
+    document.querySelector('#amount').value += prizeFactor[hasard[0]] * bet
+    document.querySelector('#win').value = prizeFactor[hasard[0]] * bet
+
+  }
+
+
+
+
+  /*let contador = {}
   hasard.forEach(element => {
 
     if (contador[element])
@@ -74,5 +136,5 @@ function shuffleGame() {
     8: 500
   }
 
-  document.querySelector('#amount').value = multiplier * bet
+  //document.querySelector('#amount').value = multiplier * bet*/
 }
