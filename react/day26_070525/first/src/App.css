@@ -41,3 +41,17 @@
 h2 {
   background-color: antiquewhite;
 }
+
+.tokens {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+h3 {
+  background-color: lightyellow;
+}
+
+.tokens img {
+  width: 100%;
+}
