@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# Instalar nvm (Node Version Manager)
+echo "Instalando nvm..."
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
+# Verificar si nvm se instaló correctamente
+if [ $? -eq 0 ]; then
+echo "nvm instalado correctamente."
+else
+echo "Error al instalar nvm."
+exit 1
+fi
+
+# Activar nvm en la sesión actual
+echo "Activando nvm..."
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # Esto carga nvm
+
+# Instalar la última versión LTS de Node.js
+echo "Instalando la última versión LTS de Node.js..."
+nvm install --lts
+
+# Verificar si Node.js se instaló correctamente
+if [ $? -eq 0 ]; then
+echo "Node.js instalado correctamente."
+echo "Versión de Node.js: $(node -v)"
+echo "Versión de npm: $(npm -v)"
+else
+echo "Error al instalar Node.js."
+exit 1
+fi
+
+# Configurar la versión LTS de Node.js como la predeterminada
+echo "Configurando la versión LTS de Node.js como predeterminada..."
+nvm alias default lts/*
+
+echo "Instalación completada con éxito."
