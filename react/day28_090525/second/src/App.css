@@ -1,0 +1,47 @@
+.App {
+  text-align: center;
+}
+
+input {
+  color: orangered;
+  width: 100px;
+  line-height: 100px;
+  margin: 5px;
+  text-align:
+    center;
+  border-radius: 5px;
+  border: 1px dotted darkred;
+  font-size: 4rem;
+}
+
+.caja {
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.caja button {
+  padding: 5px 15px;
+  color: darkred
+}
+
+/*ARRAY MOVIES*/
+@import url('https://fonts.googleapis.com/css2?
+
+
+  family=Montserrat:wght@100; 500&display=swap');
+ * {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .actividades {
+    width: 50%; margin:auto; border: 2px solid grey; padding: 20px;
+  }
+
+  .title {
+    color:red
+  }
+
+  .direction {
+    color: green
+  }
