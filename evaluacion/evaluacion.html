@@ -1,52 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Evaluacion</title>
+  <title>Evaluación</title>
   <link rel="stylesheet" href="evaluacion.css">
 </head>
+
 <body>
   <div class="container">
-    <header class="title"><span class="title-text">Evaluacion MF0491</span> 
+    
+    <!-- CABECERA -->
+    <header class="header">
+      <span class="title-text">Evaluación MF0491</span>
       <img src="recursos/logo.png" alt="logo" class="logo">
     </header>
 
-    
-    <div class="navegacion">
+    <!-- NAVEGACIÓN -->
+    <nav class="navegacion">
       <ul class="pages">
-        <li><a href="">Página 1</a></li>
-        <li><a href="">Página 2</a></li>
-        <li><a href="">Página 3</a></li>
+        <li><a href="#">Página 1</a></li>
+        <li><a href="#">Página 2</a></li>
+        <li><a href="#">Página 3</a></li>
       </ul>
-    </div>
-    <div class="seccion">
-      <div class="form">
-        <form action="">
+    </nav>
+
+    <!-- SECCIÓN DE CONTENIDO -->
+    <main class="contenido">
+      <!-- Caja 1: Formulario -->
+      <section class="formulario">
+        <form>
           <p>
-            <label for="texto">texto</label>
+            <label for="texto">Texto:</label>
             <input type="text" id="texto">
           </p>
           <p>
-            <label for="number">numero</label>
+            <label for="number">Número:</label>
             <input type="text" id="number">
           </p>
-          <span>checks</span>
-          <label for="check">1</label>
-          <input type="checkbox" id="check">
-          <label for="check">2</label>
-          <input type="checkbox" id="check">
-          <label for="check">3</label>
-          <input type="checkbox" id="check">
-          <label for="check">4</label>
-          <input type="checkbox" id="check">
-          <br/>
-          <br/>
-          <input class="button" type="button" value="validar" id="button">
+          <span>Checks:</span><br />
+          <label><input type="checkbox" name="check" value="1"> 1</label>
+          <label><input type="checkbox" name="check" value="2"> 2</label>
+          <label><input type="checkbox" name="check" value="3"> 3</label>
+          <label><input type="checkbox" name="check" value="4"> 4</label>
+          <br /><br />
+          <input class="button" type="button" value="Validar" id="button">
           <input class="output" type="text" id="output">
-      </div>
-      <div class="lorem">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, aspernatur ad similique pariatur cupiditate fugiat, alias assumenda possimus animi porro consectetur. Asperiores totam sapiente dolore soluta quis quidem repellat reprehenderit.
+        </form>
+      </section>
+
+      <!-- Caja 2: Texto + Selector -->
+      <section class="info">
+        <img src="recursos/nature.jpg" alt="nature">
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, aspernatur ad similique pariatur cupiditate fugiat...
+        </p>
         <select id="color">
           <option disabled selected>Seleccione color de fondo</option>
           <option value="initial">Color por defecto</option>
@@ -56,12 +65,14 @@
           <option value="yellow">Amarillo</option>
           <option value="black">Negro</option>
         </select>
-      </div>
-      </form>
-    </div>
-    <div class="pie">
+      </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie">
       Avaluació formativa MF0491_3
-    </div>
+    </footer>
   </div>
 </body>
+
 </html>
