@@ -1,0 +1,191 @@
+body {
+  background-color: #ADD8E6;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* TITLE */
+.title {
+  height: 80px;
+  width: 100%;
+  background-color: #D3D3D3;
+  border: 2px solid #1F08FE;
+  border-radius: 5px;
+  color: #1F08FE;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  font-weight: bold;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.title-text {
+  flex: 1;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.logo {
+  height: 40px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 960px) {
+  .container {
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .title {}
+
+  .title-text {
+    font-size: 1.2rem;
+  }
+
+  .logo {
+    height: 35px;
+  }
+}
+
+/*NAVEGACION*/
+.navegacion {
+  background-color: #D3D3D3;
+  margin-top: 10px;
+  width: 100%;
+  border: 2px solid #1F08FE;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px 0;
+  box-sizing: border-box;
+  /* Asegura que el padding no cause desbordamiento */
+}
+
+.navegacion .pages {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  /* Mantenemos los enlaces en fila */
+  justify-content: center;
+  /* Los centramos en la caja */
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.navegacion .pages li {
+  margin: 0 10px;
+  /* Espaciado entre los enlaces */
+}
+
+.navegacion .pages a {
+  padding: 4px 20px;
+  /* Ajustamos el padding para que no se desborden */
+  border-radius: 2px;
+  text-decoration: none;
+  border: 1px solid #1F08FE;
+  background-color: #90EE90;
+  transition: background-color 0.3s, border-color 0.3s;
+  box-sizing: border-box;
+  /* Asegura que el padding no cause desbordamiento */
+}
+
+.navegacion .pages a:hover {
+  background-color: aqua;
+  border-color: #1F08FE;
+  color: white;
+}
+
+/* RESPONSIVE BEHAVIOR */
+@media (max-width: 960px) {
+  .navegacion .pages {
+    flex-wrap: wrap;
+    /* Permitimos que los enlaces se ajusten automáticamente si es necesario */
+    justify-content: center;
+    /* Aseguramos que los enlaces se mantengan centrados */
+  }
+
+  .navegacion .pages a {
+    padding: 8px 20px;
+    /* Reducimos el padding */
+    font-size: 1.1rem;
+    /* Aumentamos ligeramente el tamaño de la fuente */
+  }
+}
+
+@media (max-width: 600px) {
+  .navegacion .pages a {
+    padding: 6px 15px;
+    /* Ajustamos aún más el padding */
+    font-size: 1rem;
+    /* Texto más pequeño */
+  }
+}
+
+/*SECCION*/
+
+.seccion {
+
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: #D3D3D3;
+  width: 100%;
+  border: 2px solid #1F08FE;
+  display: flex;
+}
+
+.form {
+  border-radius: 3px;
+  margin: 10px 5px 10px 10px;
+  background-color: #90EE90;
+  padding: 10px;
+  flex: 1;
+  text-align: center;
+}
+
+.lorem {
+  border-radius: 3px;
+  margin: 10px 10px 10px 5px;
+  background-color: aqua;
+  padding: 10px;
+  flex: 1;
+}
+
+.button {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.output {
+
+  margin: auto;
+  height: 40px;
+  width: 70%;
+  background-color: #FFD700;
+  border: 1px solid sienna;
+}
+
+/*PIE*/
+
+.pie {
+
+  padding-top: 10px;
+  height: 80px;
+  background-color: #D3D3D3;
+  margin-top: 10px;
+  width: 100%;
+  border: 2px solid #1F08FE;
+  border-radius: 5px;
+  text-align: center;
+}
