@@ -10,13 +10,13 @@
 
 <body>
   <div class="container">
-    
+
     <!-- CABECERA -->
     <header class="header">
-      <span class="title-text">Evaluación MF0491</span>
+      <span class="title-text">Evaluacion MF0491</span>
       <img src="recursos/logo.png" alt="logo" class="logo">
     </header>
-    
+
     <!-- NAVEGACIÓN -->
     <nav class="navegacion">
       <ul class="pages">
@@ -31,41 +31,55 @@
       <!-- Caja 1: Formulario -->
       <section class="formulario">
         <form>
-          <p>
-            <label for="texto">Texto:</label>
+          <div class="form-row">
+            <label for="texto">Texto</label>
             <input type="text" id="texto">
-          </p>
-          <p>
-            <label for="number">Número:</label>
+          </div>
+
+          <div class="form-row">
+            <label for="number">Número</label>
             <input type="text" id="number">
-          </p>
-          <span>Checks:</span><br />
-          <label><input type="checkbox" name="check" value="1"> 1</label>
-          <label><input type="checkbox" name="check" value="2"> 2</label>
-          <label><input type="checkbox" name="check" value="3"> 3</label>
-          <label><input type="checkbox" name="check" value="4"> 4</label>
-          <br /><br />
+          </div>
+
+          <div class="form-row checks">
+            <span>Checks</span>
+            <label><input type="checkbox" name="check" value="1"> 1</label>
+            <label><input type="checkbox" name="check" value="2"> 2</label>
+            <label><input type="checkbox" name="check" value="3"> 3</label>
+            <label><input type="checkbox" name="check" value="4"> 4</label>
+          </div>
+
           <input class="button" type="button" value="Validar" id="button">
           <input class="output" type="text" id="output">
         </form>
       </section>
 
       <!-- Caja 2: Texto + Selector -->
-      <section class="info">
-        <img src="recursos/nature.jpg" alt="nature">
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, aspernatur ad similique pariatur cupiditate fugiat...
-        </p>
-        <select id="color">
-          <option disabled selected>Seleccione color de fondo</option>
-          <option value="initial">Color por defecto</option>
-          <option value="green">Verde</option>
-          <option value="blue">Azul</option>
-          <option value="red">Rojo</option>
-          <option value="yellow">Amarillo</option>
-          <option value="black">Negro</option>
-        </select>
+      <section class="info" id="info">
+        <div class="info-content">
+          <img src="recursos/nature.jpg" alt="nature">
+          <div class="text-content">
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam maxime nemo quod sapiente sunt harum nisi, delectus pariatur provident officiis praesentium veritatis doloribus, molestiae natus adipisci corporis necessitatibus quaerat repellat, nesciunt itaque mollitia. Necessitatibus itaque officia beatae quae expedita fuga totam voluptas molestiae aut. Dignissimos ducimus nisi modi culpa esse.
+            </p>
+            <br>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad aut commodi asperiores nulla odio quos totam ipsum qui debitis perferendis!
+            </p>
+            <br>
+            <span>Fondo</span>
+            <select id="color">
+              <option value="white">blanco</option>
+              <option value="yellow">Amarillo</option>
+              <option value="green">Verde</option>
+              <option value="blue">Azul</option>
+              <option value="red">Rojo</option>
+              <option value="initial">Transparente</option>
+            </select>
+          </div>
+        </div>
       </section>
+
     </main>
 
     <!-- PIE DE PÁGINA -->
@@ -73,6 +87,7 @@
       Avaluació formativa MF0491_3
     </footer>
   </div>
+  <script src="./evaluacion.js"></script>
 </body>
 
 </html>

@@ -7,10 +7,9 @@
 }
 
 body {
-  background-color: white;
+  background-color: #ADD8E6;
   display: flex;
   justify-content: center;
-  padding: 20px;
 }
 
 /* CONTENEDOR PRINCIPAL */
@@ -20,7 +19,6 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
-  min-height: 95vh;
   background-color: #ADD8E6;
 }
 
@@ -46,7 +44,6 @@ body {
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .logo {
@@ -62,13 +59,13 @@ body {
   border-radius: 5px;
   text-align: center;
   padding: 10px 0;
+  margin-top: 10px;
 }
 
 .navegacion .pages {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 10px;
 }
 
 .navegacion .pages li a {
@@ -105,17 +102,18 @@ body {
 .form {
   flex: 1;
   margin: 10px 5px 10px 10px;
-  background-color: #90EE90;
+  background-color: white;
   padding: 20px;
   border-radius: 3px;
   text-align: center;
+  flex-wrap: wrap;
 }
 
 .info,
 .lorem {
   flex: 1;
   margin: 10px 10px 10px 5px;
-  background-color: aqua;
+  background-color: white;
   padding: 10px;
   border-radius: 3px;
 }
@@ -135,6 +133,27 @@ body {
   margin-top: 10px;
 }
 
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.form-row label {
+  min-width: 50px;
+}
+
+.form-row input[type="text"] {
+  flex: 1;
+  padding: 5px;
+}
+
+.checks {
+  flex-wrap: wrap;
+}
+
+
 /* ===== Estilo interno del formulario ===== */
 
 .formulario form {
@@ -144,20 +163,9 @@ body {
   gap: 10px;
 }
 
-.formulario p {
-  width: 100%;
-  max-width: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-
 .formulario input[type="text"] {
-  width: 100%;
-  padding: 6px;
-  border: 1px solid #1F08FE;
-  border-radius: 3px;
+  padding: 4px;
+  border: 1px solid black;
 }
 
 .formulario .button {
@@ -166,8 +174,31 @@ body {
   align-self: center;
 }
 
+.info {
+  flex: 1;
+  margin: 10px 10px 10px 5px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.info-content {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+
+.text-content {
+  flex: 1;
+  min-width: 200px;
+}
+
 /* PIE DE PÁGINA */
 .pie {
+  margin-top: 10px;
   height: 80px;
   background-color: #D3D3D3;
   border: 2px solid #1F08FE;
@@ -181,8 +212,9 @@ body {
 /* RESPONSIVE */
 @media (max-width: 960px) {
   .container {
-    width: 100%;
-    padding: 0 10px;
+
+    width: 90%;
+    padding: 10px 10px;
   }
 
   .title-text {
@@ -199,8 +231,12 @@ body {
   }
 
   .navegacion .pages a {
-    padding: 8px 20px;
+    padding: 8px 10px;
     font-size: 1.1rem;
+  }
+
+  .info-content img{
+    justify-content: center;
   }
 }
 
