@@ -20,7 +20,6 @@ function Tokenmicro({ datas, total }) {
     node.remove()
   }
 
-
   return (
     <div className='ficha'>
       <img src={image} alt='' />

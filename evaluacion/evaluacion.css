@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #ADD8E6;
+  background-color: white;
   display: flex;
   justify-content: center;
   padding: 20px;
@@ -16,17 +16,17 @@ body {
 /* CONTENEDOR PRINCIPAL */
 .container {
   width: 60%;
-  margin: auto;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: white;
-  min-height: 100vh;
+  min-height: 95vh;
+  background-color: #ADD8E6;
 }
 
 /* CABECERA */
-.header, .title {
+.header,
+.title {
   height: 80px;
   width: 100%;
   background-color: #D3D3D3;
@@ -37,7 +37,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
   font-weight: bold;
   overflow: hidden;
 }
@@ -58,7 +57,6 @@ body {
 /* NAVEGACIÓN */
 .navegacion {
   background-color: #D3D3D3;
-  margin-top: 10px;
   width: 100%;
   border: 2px solid #1F08FE;
   border-radius: 5px;
@@ -90,7 +88,10 @@ body {
 }
 
 /* SECCIÓN DE CONTENIDO */
-.contenido, .seccion {
+/* ===== Layout general ===== */
+
+.contenido,
+.seccion {
   display: flex;
   flex-wrap: wrap;
   margin-top: 10px;
@@ -100,16 +101,18 @@ body {
   border-radius: 5px;
 }
 
-.formulario, .form {
+.formulario,
+.form {
   flex: 1;
   margin: 10px 5px 10px 10px;
   background-color: #90EE90;
-  padding: 10px;
+  padding: 20px;
   border-radius: 3px;
   text-align: center;
 }
 
-.info, .lorem {
+.info,
+.lorem {
   flex: 1;
   margin: 10px 10px 10px 5px;
   background-color: aqua;
@@ -126,13 +129,45 @@ body {
   margin: auto;
   height: 40px;
   width: 70%;
+  max-width: 300px;
   background-color: #FFD700;
   border: 1px solid sienna;
+  margin-top: 10px;
+}
+
+/* ===== Estilo interno del formulario ===== */
+
+.formulario form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.formulario p {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+.formulario input[type="text"] {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #1F08FE;
+  border-radius: 3px;
+}
+
+.formulario .button {
+  margin-top: 15px;
+  padding: 6px 20px;
+  align-self: center;
 }
 
 /* PIE DE PÁGINA */
 .pie {
-  margin-top: 10px;
   height: 80px;
   background-color: #D3D3D3;
   border: 2px solid #1F08FE;
@@ -175,12 +210,15 @@ body {
     font-size: 1rem;
   }
 
-  .contenido, .seccion {
+  .contenido,
+  .seccion {
     flex-direction: column;
   }
 
-  .formulario, .form,
-  .info, .lorem {
+  .formulario,
+  .form,
+  .info,
+  .lorem {
     margin: 10px;
   }
 }

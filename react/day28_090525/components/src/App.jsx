@@ -18,9 +18,6 @@ function App() {
       <Second micro={{ name: "Commodore 64", memory: "64" }}></Second>
       <hr />
       <h1>Actividad 4</h1>
-
-
-
       <h1>Micros Vintage</h1>
       <h2>Total: {total} €</h2>
       <div className='tokens'>
