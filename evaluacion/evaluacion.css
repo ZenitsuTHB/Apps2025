@@ -85,8 +85,6 @@ body {
 }
 
 /* SECCIÓN DE CONTENIDO */
-/* ===== Layout general ===== */
-
 .contenido,
 .seccion {
   display: flex;
@@ -153,7 +151,6 @@ body {
   flex-wrap: wrap;
 }
 
-
 /* ===== Estilo interno del formulario ===== */
 
 .formulario form {
@@ -186,10 +183,8 @@ body {
 .info-content {
   display: flex;
   gap: 15px;
-  align-items: flex-start;
   flex-wrap: wrap;
 }
-
 
 .text-content {
   flex: 1;
@@ -212,9 +207,8 @@ body {
 /* RESPONSIVE */
 @media (max-width: 960px) {
   .container {
-
     width: 90%;
-    padding: 10px 10px;
+    padding: 10px;
   }
 
   .title-text {
@@ -230,13 +224,33 @@ body {
     justify-content: center;
   }
 
+  /* Ajustar los enlaces en columna cuando la pantalla es menor a 960px */
+  .navegacion .pages li {
+    display: block;
+    /* Poner los enlaces en una columna */
+    margin: 5px 0;
+  }
+
   .navegacion .pages a {
-    padding: 8px 10px;
+    padding: 8px 20px;
     font-size: 1.1rem;
   }
 
-  .info-content img{
-    justify-content: center;
+  /* Hacer que la imagen ocupe el espacio disponible en la caja 2 */
+  .info-content {
+    flex-direction: column;
+  }
+
+  .info-content img {
+    width: 100%;
+    max-width: 300px;
+    /* Ajusta el tamaño de la imagen */
+    margin-bottom: 10px;
+  }
+
+  .text-content {
+    flex-grow: 1;
+    /* Hacer que el texto ocupe el espacio restante */
   }
 }
 

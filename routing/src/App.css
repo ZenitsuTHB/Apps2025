@@ -1,0 +1,5 @@
+nav a {padding: 20px; background-color: aquamarine;text-decoration: none;color:black}
+
+nav a:hover {background-color: cadetblue;}
+
+.active {background-color: gold;}
