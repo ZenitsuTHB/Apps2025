@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Ubicacion() {
+function Ubicacion({ profesora }) {
   return (
     <div className='ubicacion'>
       <h2>Lugar:</h2>
       <div className='direccion'>
-        Dirección
+        {profesora.dirección}
       </div>
     </div>
   );

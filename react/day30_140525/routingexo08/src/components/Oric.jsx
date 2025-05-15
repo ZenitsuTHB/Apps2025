@@ -1,8 +1,9 @@
 import React from 'react'
+import oric from '../img/oric_atmos.png'
 
 function Oric() {
   return (
-    <div><h1>Oric</h1></div>
+    <div className='token'><img src={oric} alt="" /><h1>Oric</h1></div>
   )
 }
 

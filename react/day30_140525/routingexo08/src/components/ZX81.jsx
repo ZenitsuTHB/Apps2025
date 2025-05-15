@@ -1,8 +1,12 @@
 import React from 'react'
+import zx81 from '../img/Sinclair_ZX81.png'
 
 function ZX81() {
   return (
-    <div><h1>ZX81</h1></div>
+    <div className='token'>
+      <img src={zx81} alt="" />
+      <h1>ZX81</h1>
+    </div>
   )
 }
 

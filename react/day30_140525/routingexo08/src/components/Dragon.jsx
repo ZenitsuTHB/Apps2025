@@ -1,10 +1,11 @@
 import React from 'react'
+import dragon from '../img/dragon_32.png'
 
 function Dragon() {
   return (
     <div className='token'>
-        <img src="..img/dragon_32.png" alt="Dragon 32" />
-        <h1>Dragon 32</h1>
+      <img src={dragon} alt="Dragon 32" />
+      <h1>Dragon 32</h1>
     </div>
   )
 }

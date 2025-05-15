@@ -1,15 +1,17 @@
-import React from 'react';
-import foto from '../img/marta.PNG'; // Usamos 'import'
+import React, { useContext } from 'react';
+//import foto from '../img/marta.PNG'; // Usamos 'import'
+import { Context } from '../context/Context';
 
 function Profesora() {
+  const { profesora } = useContext(Context)
   return (
     <div className='profesora'>
       <h2>Profesora:</h2>
       <div className='foto'>
-        <img src={foto} alt="profesora" />
+        <img src={profesora.foto} alt="profesora" />
       </div>
       <div className='nombre'>
-        Nombre profesora
+        {profesora.nombre}
       </div>
     </div>
   );

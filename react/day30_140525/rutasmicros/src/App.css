@@ -1,0 +1,17 @@
+* {margin:0;box-sizing: border-box;}
+
+.App {width: 90%; margin:auto;border:1px solid grey}
+
+nav {text-align: center}
+nav a {padding: 10px; text-decoration: none; background-color: black; color: white; font-size: 0.9em;}
+
+nav a:hover {background-color: brown;}
+
+.enlacesmicros {display: flex; justify-content: center; align-items: center; flex-wrap: wrap;margin-top: 50px;}
+
+.enlacesmicros a {width: 30%;}
+
+.enlacesmicros img {width: 100%;}
+
+.ficha {width: 40%;margin:auto;margin-top:50px}
+.ficha img {width: 100%;}

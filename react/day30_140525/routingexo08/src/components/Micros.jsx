@@ -1,24 +1,22 @@
 const micros = [
   {
-    path: "spectrum", //→ nombre de la ruta a utilizar
+    micro: "spectrum", //→ nombre de la ruta a utilizar
     modelo: "ZX Spectrum", //→ nombre del micro
     imagen: "sinclair_zx_spectrum.png", //→ nombre de la imagen
-  },
-  {
-    path: "zx81",
+  }, {
+    micro: "zx81",
     modelo: "ZX 81",
     imagen: "Sinclair_ZX81.png",
-  },
-  {
-    path: "toshiba",
+  }, {
+    micro: "toshiba",
     modelo: "MSX Toshiba",
     imagen: "toshiba_msx.png",
-  },
-  {
-    path: "dragon",
+  }, {
+    micro: "dragon",
     modelo: "Dragon 32",
     imagen: "dragon_32.png",
-  },
+  }
+
 ];
 
 export default micros
