@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form'
 
 function App() {
 
-  const { register, handleSubmit, formState: { errors }, watch } = useForm()
+  const { register, handleSubmit, formState: { errors }, watch, reset, autoFocus } = useForm()
 
   function getDatas(datas) {
 
@@ -18,7 +18,7 @@ function App() {
       <form onSubmit={handleSubmit(getDatas)}>
         <div className='pregunta'>
           <label htmlFor='nombre'>Nombre: </label>
-          <input id='nombre' placeholder='Escribe tu nombre' autoFocus {...register('name', { required: true, minLength: 2, maxLength: 30 })} />
+          <input id='nombre' placeholder='Escribe tu nombre' autoFocus {...register('name', { required: true, minLength: 2, maxLength: 30 })} defaultValue={personalbar.name} />
         </div>
         {
           errors.name?.type === 'required' &&
