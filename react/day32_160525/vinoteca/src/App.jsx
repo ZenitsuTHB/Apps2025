@@ -4,7 +4,7 @@ import Footer from './componentes/comunes/Footer';
 import Inicio from './componentes/contenidos/inicio/Inicio';
 import Notfound from './componentes/contenidos/noencontrado/Notfound';
 import Listavinos from './componentes/contenidos/carta/listavinos/Listavinos';
-import Altavino from './componentes/contenidos/carta/altavino'
+import Altavino from './componentes/contenidos/carta/altavino/Altavino'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 function App() {
@@ -13,13 +13,11 @@ function App() {
       <Router>
         <Navbar></Navbar>
         <Routes>
-          <Route path='/ ' element={<Inicio />}></Route>
+          <Route path='/' element={<Inicio />}></Route>
           <Route path='/galeria' element={<Listavinos />}></Route>
           <Route path='/dardealta' element={<Altavino />}></Route>
-          <Notfound></Notfound>
-
+          <Route path='/*' element={<Notfound />}></Route>
         </Routes>
-
       </Router >
       <Footer></Footer>
     </div >
