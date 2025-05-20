@@ -1,0 +1,100 @@
+ Completa: Hacking Ético y Leyes de Ciberseguridad en España
+ --------------------------------------------------------------
+
+ 1. RUTA PARA APRENDER HACKING ÉTICO DESDE 0
+ -----------------------------------------
+ Nivel Inicial – Fundamentos
+ ----------------------------
+ - Redes: Protocolos (IP, TCP, UDP, DNS, HTTP/S)
+ - Sistemas operativos: Linux y Windows
+ - Línea de comandos (bash y PowerShell)
+ - Virtualización (VirtualBox o VMware)
+
+ Herramientas básicas que deberías dominar:
+ ------------------------------------------
+ - Nmap → Escaneo de red y puertos
+ - Wireshark → Análisis de tráfico de red
+ - Burp Suite → Pruebas de seguridad web
+ - Kali Linux → Sistema operativo con herramientas preinstaladas
+ - Metasploit → Explotación de vulnerabilidades
+
+ Plataformas para practicar:
+ ---------------------------
+ - Hack The Box: https://www.hackthebox.com/
+ - TryHackMe: https://tryhackme.com/
+ - OverTheWire: https://overthewire.org/
+
+ 2. LIBROS RECOMENDADOS PARA APRENDER HACKING ÉTICO
+ -------------------------------------------------
+ Técnicos (en español o inglés):
+ -------------------------------
+ 1. **"Hacking Ético 101"** – Pablo González Pérez (EN ESPAÑOL)
+    - Muy accesible para principiantes.
+
+    2. **"The Web Application Hacker's Handbook"** – Dafydd Stuttard, Marcus Pinto
+       - Ideal para seguridad web (con Burp Suite).
+
+       3. **"Red Team Field Manual (RTFM)"**
+          - Manual rápido de comandos útiles para pentesters.
+
+	  4. **"Linux Basics for Hackers"** – OccupyTheWeb
+	     - Aprende Linux desde la perspectiva del hacking.
+
+	     3. LIBROS Y LEYES SOBRE CIBERSEGURIDAD EN ESPAÑA
+	     ---------------------------------------------
+	     Leyes clave que debes conocer:
+	     ------------------------------
+	     1. **Código Penal Español (Ley Orgánica 10/1995)**
+	        - Consulta especialmente los artículos 197 a 201 sobre delitos informáticos (acceso no autorizado, interceptación, daños a sistemas, etc.).
+
+		2. **Ley Orgánica 3/2018 (LOPDGDD)**
+		   - Protección de datos personales, junto con el Reglamento General de Protección de Datos (RGPD) de la UE.
+
+		   3. **Ley 34/2002 de Servicios de la Sociedad de la Información (LSSI)**
+		      - Trata temas como el spam, cookies, y comercio electrónico.
+
+		      Libros sobre derecho y ciberseguridad:
+		      --------------------------------------
+		      1. **"Derecho y Ciberseguridad"** – Andrés Velázquez
+		      2. **"Delitos Informáticos"** – Vicente Gimeno Sendra
+		      3. **"Ciberderecho"** – Antonio Ramos
+
+		      4. CERTIFICACIONES RECOMENDADAS A FUTURO
+		      --------------------------------------
+		      | Certificación                     | Nivel     | Contenido                           |
+		      |------------------------------------|-----------|-------------------------------------|
+		      | **CompTIA Security+**              | Básico    | Fundamentos de seguridad            |
+		      | **CEH (Certified Ethical Hacker)** | Intermedio| Herramientas y técnicas ofensivas   |
+		      | **OSCP (Offensive Security Certified Professional)** | Avanzado  | Red Team, explotación real         |
+
+		      5. CRONOGRAMA DE ESTUDIO SEMANAL RECOMENDADO
+		      -------------------------------------------
+		      Semana 1: Fundamentos y herramientas básicas
+		      -------------------------------------------
+		      - **Lunes a Miércoles**: Introducción a las redes (IP, TCP, UDP, DNS, HTTP)
+		      - **Jueves y Viernes**: Estudio de sistemas operativos (Linux y Windows)
+		      - **Sábado y Domingo**: Instalación de Kali Linux y herramientas (Nmap, Wireshark)
+
+		      Semana 2: Hacking básico y pruebas de penetración
+		      ------------------------------------------------
+		      - **Lunes a Miércoles**: Introducción a Burp Suite y Metasploit
+		      - **Jueves y Viernes**: Estudio de vulnerabilidades comunes (SQLi, XSS, RCE)
+		      - **Sábado y Domingo**: Practica en Hack The Box o TryHackMe (Fase de iniciación)
+
+		      Semana 3: Introducción a la legislación
+		      --------------------------------------
+		      - **Lunes a Miércoles**: Estudio del Código Penal (Artículos sobre delitos informáticos)
+		      - **Jueves y Viernes**: Leyes sobre protección de datos (LOPDGDD, RGPD)
+		      - **Sábado y Domingo**: Estudio de la Ley de Servicios de la Sociedad de la Información (LSSI)
+
+		      Semana 4: Pruebas avanzadas y práctica ética
+		      -------------------------------------------
+		      - **Lunes a Miércoles**: Ataques avanzados con Metasploit (exploits)
+		      - **Jueves y Viernes**: Revisión de casos prácticos y auditoría ética
+		      - **Sábado y Domingo**: Realiza un ejercicio práctico completo en plataformas como Hack The Box o TryHackMe.
+
+		      Recuerda que siempre debes practicar en entornos controlados y con permiso.
+
+		      ¡Sigue aprendiendo y avanzando hacia tu objetivo de ser un hacker ético certificado!
+
+

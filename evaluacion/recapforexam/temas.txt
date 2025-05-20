@@ -1,0 +1,4 @@
+display flex
+position relative
+formulario
+rotate animation

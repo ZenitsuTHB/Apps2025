@@ -2,11 +2,11 @@
 import './Vino.css'
 import IMG from '../../../../entorno/Img'
 
-const Vino = ({ vino /*, imagen */ }) => {
+const Vino = ({ vino, onMouseEnter/*, imagen */ }) => {
 
 
   return (
-    <div>
+    <div onMouseEnter={onMouseEnter}>
       <img className="mx-auto d-block" src={`${IMG}/${vino.imagen}`} alt={vino.nombre} />
     </div>
   )
