@@ -1,9 +1,9 @@
-section p {
+#seccion1 p {
   text-align: justify;
   line-height: 30px;
 }
 
-section span {
+#seccion1 span {
   color: blue;
 }
 
@@ -23,19 +23,24 @@ section span {
   align-items: flex-start;
   gap: 10px;
   margin-bottom: 10px;
+  flex-wrap: wrap;
 }
 
 #seccion2 .container1 img {
   width: 250px;
   height: auto;
   flex-shrink: 0;
+  max-width: 100%;
 
 }
 
 #seccion2 .text1 {
   max-height: 250px;
   overflow: hidden;
+  overflow-y: auto;
   margin: 0;
+  flex-basis: 150px;
+  flex-grow: 1;
 }
 
 #seccion2 .container1 p {
@@ -46,8 +51,15 @@ section span {
   margin-top: 10px;
 }
 
+#seccion3 .table-container {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
 #seccion3 table {
+  max-width: 100%;
   margin: 20px auto;
+  table-layout: auto;
 }
 
 #seccion3 table,
@@ -67,7 +79,7 @@ td {
 
 
 
-.contenedor-cajas {
+#seccion4 .contenedor-cajas {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -79,8 +91,8 @@ td {
   flex-wrap: wrap;
 }
 
-.caja {
-  flex: 1 1 200px;
+#seccion4 .caja {
+  flex: 1 200px;
   max-width: 200px;
   height: 200px;
   border: 1px solid blue;
@@ -93,32 +105,35 @@ td {
   box-sizing: border-box;
 }
 
-.caja1 {
+#seccion4 .caja1 {
   background-color: #02FEFF;
 }
 
-.caja2 {
+#seccion4 .caja2 {
   background-color: #FFB7C2;
 }
 
-.caja3 {
+#seccion4 .caja3 {
   background-color: #FF9F7C;
 }
 
-.caja4 {
+#seccion4 .caja4 {
   background-color: #21B0AA;
 }
 
 #seccion5 article {
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   height: 300px;
   border: 2px solid blue;
   margin: 0 auto;
   position: relative;
+  box-sizing: border-box;
 }
 
 #seccion5 article img {
   position: absolute;
   top: 50px;
   left: 100px;
+  overflow: hidden;
 }
