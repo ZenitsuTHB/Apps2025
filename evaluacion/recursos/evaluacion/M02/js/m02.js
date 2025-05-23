@@ -71,7 +71,7 @@ document.getElementById('evaluar').addEventListener('click', function () {
   const inputNote = parseFloat(document.getElementById('nota').value.trim());
   const resultInput = document.getElementById('result');
 
-  if (inputNote === '' || isNaN(inputNote)) {
+  if (valor === '' || isNaN(inputNote)) {
     alert('inputNote no numérica'); return;
   }
   else if (inputNote < 0 || inputNote > 10) {
