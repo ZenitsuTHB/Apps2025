@@ -68,7 +68,7 @@ document.getElementById('validar').addEventListener('click', function () {
 
 document.getElementById('evaluar').addEventListener('click', function () {
 
-  const inputNote = parseFloat(document.getElementById('nota').value.trim());
+  const inputNote = oat(document.getElementById('nota').value.trim());
   const resultInput = document.getElementById('result');
 
   if (valor === '' || isNaN(inputNote)) {
