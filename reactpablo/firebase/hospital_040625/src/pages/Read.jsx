@@ -17,7 +17,6 @@ function Read() {
         <tbody>
           {/* You can add rows here */}
           <tr>
-
           </tr>
         </tbody>
       </table>
