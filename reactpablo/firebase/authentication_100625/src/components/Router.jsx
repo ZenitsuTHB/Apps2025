@@ -1,6 +1,6 @@
 // src/Router.jsx
 import React from 'react';
-import { logout } from './services/auth';
+import { logout } from '../services/auth';
 
 export default function Router() {
   return (
