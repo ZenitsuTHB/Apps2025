@@ -1,4 +1,6 @@
 import { auth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, doc, setDoc, db } from "./config";
+// Already correct
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 export const signUp = async (email, password) => {
   try {
@@ -22,6 +24,18 @@ export const signIn = async (email, password) => {
     return err.message;
   }
 }
+
+
+export const loginWithGoogle = async () => {
+  const provider = new GoogleAuthProvider();
+  try {
+    const result = await signInWithPopup(auth, provider);
+    return result.user;
+  } catch (error) {
+    console.error("Google login error:", error);
+    return null;
+  }
+};
 
 export const getCurrentUserId = async () => await auth.currentUser?.uid;
 export const logout = async () => await signOut(auth);
