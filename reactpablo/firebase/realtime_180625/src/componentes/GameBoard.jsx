@@ -1,3 +1,4 @@
+//Tablero de juego (tres en raya)
 import React from 'react'
 
 function GameBoard() {

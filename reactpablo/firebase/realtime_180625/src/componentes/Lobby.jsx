@@ -1,3 +1,4 @@
+//Pantalla de sala de espera
 import React from 'react'
 
 function Lobby() {
