@@ -1,11 +1,11 @@
 import { useState } from 'react'
+import Navigate   from '../src/Routes/Router'
 
 function App() {
 
-  const [room, setRoomId] = useState('');
-  const [isHost, setIsHost] = useState(false);
-
-  return ()
+  return (
+    <Navigate />
+  )
 }
 
 export default App

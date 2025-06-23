@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-function RoomForm() {
+function RoomForm( { onCreate, onJoin }) {
+
+  const [roomId, setRoomId] = useState('');
+
   return (
     <div>
       <p>Let s play !</p>
-      <button value={"Create"}></button>
+      <button value={onCreate}>Create the room</button>
       <br />
-      <button value={"Join"}></button>
+      <input value={roomId} onChange={e => setRoomId(e.target.value)} />
+      <br />
+      <button value={onJoin}>Join the Room</button>
     </div>
   )
 }
