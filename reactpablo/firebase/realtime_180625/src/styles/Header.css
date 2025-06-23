@@ -1,0 +1,111 @@
+/* TITLE */
+.game-title {
+  font-size: 4rem;
+  color: #00d4ff;
+  text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.game-title::before {
+  content: '⚡️ ';
+  color: #00bfff;
+  font-size: 1.5rem;
+}
+
+.game-title::after {
+  content: ' ⚡️';
+  color: #00bfff;
+  font-size: 1.5rem;
+}
+
+.game-title:hover {
+  animation: lightningFlicker 7.0s ease-in-out;
+  text-shadow:
+    0 0 5px #00d4ff,
+    0 0 15px #00d4ff,
+    0 0 30px #00d4ff,
+    0 0 60px #00bfff,
+    2px -2px 10px rgba(0, 212, 255, 0.6);
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+@keyframes lightningFlicker {
+  0% { text-shadow: 0 0 10px #00d4ff; transform: scale(1); }
+  20% { text-shadow: 0 0 20px #00d4ff, 2px -2px 10px #00f0ff; transform: skew(-2deg, 1deg); }
+  40% { text-shadow: 0 0 5px #00d4ff; transform: scale(1.05); }
+  60% { text-shadow: 0 0 25px #00f0ff, -2px 2px 15px #00ffff; transform: scale(1.1) rotate(1deg); }
+  80% { text-shadow: 0 0 10px #00d4ff; transform: scale(1); }
+  100% { text-shadow: 0 0 10px #00d4ff; transform: none; }
+}
+
+.header-container {
+  position: relative;
+  text-align: center;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.game-title-animated {
+  font-size: 4rem;
+  color: #00d4ff;
+  font-family: 'Orbitron', sans-serif;
+  display: inline-block;
+}
+
+.letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-100px) scale(0.5);
+  animation: flyIn 0.6s forwards ease-out;
+  text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff;
+}
+
+@keyframes flyIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* 🔵 Orbiting Circles */
+
+.orbit-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10rem;
+  height: 10rem;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.orb {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #00d4ff;
+  box-shadow: 0 0 10px #00d4ff;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.orb1 {
+  animation: orbit 4s linear infinite;
+}
+
+.orb2 {
+  animation: orbit 6s linear infinite reverse;
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(5rem) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(5rem) rotate(-360deg);
+  }
+}

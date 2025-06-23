@@ -1,0 +1,112 @@
+/* GLOBAL STYLES */
+body {
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(ellipse at center, #0d0d1f 0%, #000000 100%);
+  color: #ffffff;
+  text-align: center;
+}
+
+/* HEADER */
+header {
+  background-color: transparent;
+  padding: 2rem;
+  text-align: center;
+  color: #00d4ff;
+  border-bottom: 1px solid #00d4ff33;
+}
+
+
+/* FOOTER */
+footer {
+  margin-top: 15px;
+  padding: 2rem;
+  text-align: center;
+  background: transparent;
+  color: #00d4ff;
+  border-top: 1px solid #00d4ff33;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1rem;
+  box-shadow: 0 -2px 20px #00d4ff22;
+}
+
+
+/* TAGLINE */
+.tagline {
+  font-family: 'Share Tech Mono', monospace;
+  color: #a100ff;
+  font-size: 1.8rem;
+  margin-top: 0.5rem;
+  text-shadow: 0 0 8px #a100ff55;
+}
+
+/* NAVIGATION */
+.navbar {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.navbar a {
+  color: #00d4ff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: 'Share Tech Mono', monospace;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar a:hover {
+  color: #a100ff;
+  text-shadow: 0 0 8px #a100ff;
+}
+
+/* BUTTONS */
+button {
+  background-color: #00d4ff;
+  border: none;
+  color: #000;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  box-shadow: 0 0 15px #00d4ff;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  font-family: 'Orbitron', sans-serif;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #00f0ff;
+}
+
+/* PAGE CONTAINER EXAMPLE */
+.page-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* DERROTA PAGE */
+.derrota-container {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #00d4ff33;
+  margin: 2rem auto;
+  max-width: 800px;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.derrota-container h2 {
+  font-size: 2rem;
+  color: #00d4ff;
+  text-shadow: 0 0 8px #00d4ff;
+  margin-bottom: 1rem;
+}
+
+.derrota-container p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}

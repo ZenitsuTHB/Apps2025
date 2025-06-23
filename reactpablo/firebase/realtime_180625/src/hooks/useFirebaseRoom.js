@@ -1,7 +1,7 @@
 //Lógica para conectar, crear y escuchar salas
 // src/hooks/useFirebaseRoom.js
 import { ref, set, onValue, getDatabase, onDisconnect } from 'firebase/database';
-import { db } from '../services/firebaseConfig';
+import { db } from '../services/config';
 import { useState, useEffect } from 'react';
 
 export function useFirebaseRoom(roomId) {
