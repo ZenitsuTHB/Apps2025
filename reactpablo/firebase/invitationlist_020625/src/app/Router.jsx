@@ -5,7 +5,7 @@ import Read from '../pages/Read';
 import Delete from '../pages/Delete';
 import Crud from '../pages/Crud';
 import Layout from '../componentes/Layout';
-import Login from '../pages/Login';
+//import Login from '../pages/Login';
 
 const Router = () => {
   return (
@@ -13,7 +13,7 @@ const Router = () => {
       <Layout>
         <Routes>
           {/*<Route path='/' element={<Home />} />*/}
-          <Route path="/login" element={<Login />} />
+          {/*<Route path="/login" element={<Login />} />*/}
           <Route path='/crud' element={<Crud />} />
           <Route path='/read' element={<Read />} />
           <Route path='/create' element={<Create />} />

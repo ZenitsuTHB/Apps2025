@@ -3,11 +3,34 @@ import { auth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signO
 const collectionName = 'items';
 
 // CREATE
+// export const createPerson = async (obj) => {
+//   const colRef = collection(db, collectionName);
+//   const data = await addDoc(colRef, obj);
+//   return data.id;
+// }
+
 export const createPerson = async (obj) => {
-  const colRef = collection(db, collectionName);
-  const data = await addDoc(colRef, obj);
-  return data.id;
-}
+  console.log(obj)
+  try {
+    const response = await fetch('http://localhost:3000/create', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ name: obj.name })
+    });
+
+    if (!response.ok) {
+      throw new Error('Error en la petición');
+    }
+
+    const texto = await response.text();
+    console.log(texto); // debería imprimir "ueeeeeeeeeeee! <nombre>"
+  } catch (error) {
+    console.error('Error:', error);
+  }
+};
+
 
 // UPDATE
 export const updateItem = async (id, obj) => {
