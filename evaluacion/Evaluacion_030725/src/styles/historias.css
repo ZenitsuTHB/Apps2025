@@ -1,0 +1,67 @@
+@import url('https://fonts.cdnfonts.com/css/magic-2');
+
+.historias-container {
+  padding: 30px;
+  font-family: 'Magic2', serif;
+  background: radial-gradient(circle at center, #f3e9d2, #bfa96e);
+  color: #3e2f1c;
+  min-height: 80vh;
+  text-align: center;
+  /* para centrar título */
+}
+
+.historias-title {
+  margin-bottom: 30px;
+  font-size: 2.8rem;
+  color: #7b5e12;
+  text-shadow: 1px 1px 2px #cbbf66;
+}
+
+/* Para que las casas estén dos por fila y centradas */
+.house-section {
+  display: inline-block;
+  vertical-align: top;
+  width: 45%;
+  /* menos del 50% para margen */
+  margin: 0 2.5% 30px 2.5%;
+  /* márgenes izquierda y derecha iguales y espacio abajo */
+  border-radius: 12px;
+  padding: 15px 20px;
+  box-shadow: 2px 2px 8px rgba(123, 94, 18, 0.3);
+  background: #fff9e3;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+  text-align: left;
+  /* texto alineado a la izquierda dentro de la caja */
+}
+
+.house-section h3 {
+  color: #5b4715;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 1px #f7f0d9;
+}
+
+.house-section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-style: italic;
+  color: #6b5930;
+}
+
+/* Colores distintivos por casa */
+.gryffindor {
+  border-color: #b22222;
+}
+
+.hufflepuff {
+  border-color: #f0e68c;
+}
+
+.ravenclaw {
+  border-color: #4169e1;
+}
+
+.slytherin {
+  border-color: #2e8b57;
+}
